@@ -1,5 +1,7 @@
 package ru.clevertec.news.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EntityListeners;
@@ -55,9 +57,10 @@ public class Comment {
     private LocalDateTime updateDateComment;
 
     @Valid
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "news_id")
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
+    @JsonBackReference
     private News news;
 }

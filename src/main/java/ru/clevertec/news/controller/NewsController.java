@@ -16,8 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 import ru.clevertec.news.entity.News;
 import ru.clevertec.news.service.NewsService;
 
-import java.util.Map;
-
 @RestController
 @RequestMapping("/news")
 @RequiredArgsConstructor

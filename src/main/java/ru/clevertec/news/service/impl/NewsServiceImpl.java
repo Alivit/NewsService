@@ -10,10 +10,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.clevertec.news.dao.NewsRepository;
 import ru.clevertec.news.entity.News;
+import ru.clevertec.news.exception.NotFoundException;
+import ru.clevertec.news.exception.ServerErrorException;
 import ru.clevertec.news.mapper.Mapper;
 import ru.clevertec.news.service.NewsService;
 
-import java.io.IOException;
 import java.util.Map;
 
 @Service
@@ -26,14 +27,19 @@ public class NewsServiceImpl implements NewsService {
     @Override
     @Transactional
     public News create(News news) {
-        newsRepository.save(news);
+        try {
+            newsRepository.save(news);
 
-        return getById(news.getId());
+            return getById(news.getId());
+        }catch (Exception e){
+            throw new ServerErrorException("Error with Insert news: " + e);
+        }
     }
 
     @Override
     public Page<News> getAll(Pageable pageable) {
         Page<News> news = newsRepository.findAll(pageable);
+        if(news.isEmpty()) throw new NotFoundException("News not found");
 
         return news;
     }
@@ -41,27 +47,33 @@ public class NewsServiceImpl implements NewsService {
     @Override
     @Transactional
     public News update(News news) {
-        try {
-            News newsUpdated = updateFieldsNews(news);
-            newsRepository.save(newsUpdated);
-            return newsUpdated;
-        } catch (JsonProcessingException e) {
-            throw new RuntimeException(e);
-        }
+       try {
+           News newsUpdated = updateFieldsNews(news);
+           newsRepository.save(newsUpdated);
+
+           return newsUpdated;
+       } catch (Exception e){
+           throw new ServerErrorException("Error with Update news: " + e);
+       }
     }
 
     @Override
     @Transactional
     public News deleteById(Long id) {
-        News news = getById(id);
-        newsRepository.delete(news);
+        try {
+            News news = getById(id);
+            newsRepository.delete(news);
 
-        return news;
+            return news;
+        } catch (Exception e){
+            throw new ServerErrorException("Error with Delete news: " + e);
+        }
     }
 
     @Override
     public News getById(Long id) {
-        return newsRepository.findById(id).orElse(null);
+        return newsRepository.findById(id).orElseThrow(() ->
+                new NotFoundException("News with id - " + id + " not found"));
     }
 
     private News updateFieldsNews(News news) throws JsonProcessingException {

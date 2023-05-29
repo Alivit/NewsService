@@ -16,8 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 import ru.clevertec.news.entity.Comment;
 import ru.clevertec.news.service.CommentService;
 
-import java.util.Map;
-
 @RestController
 @RequestMapping("/comments")
 @RequiredArgsConstructor
@@ -40,7 +38,7 @@ public class CommentController {
     }
 
     @PostMapping
-    public ResponseEntity<Comment> createCertificate(Comment comment) {
+    public ResponseEntity<Comment> createCertificate(@RequestBody Comment comment) {
         Comment response = commentService.create(comment);
 
         return new ResponseEntity<>(response, HttpStatus.CREATED);

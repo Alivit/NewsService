@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.clevertec.news.dao.CommentRepository;
 import ru.clevertec.news.entity.Comment;
+import ru.clevertec.news.exception.NotFoundException;
+import ru.clevertec.news.exception.ServerErrorException;
 import ru.clevertec.news.mapper.Mapper;
 import ru.clevertec.news.service.CommentService;
 
@@ -25,14 +27,19 @@ public class CommentServiceImpl implements CommentService {
     @Override
     @Transactional
     public Comment create(Comment comment) {
-        commentRepository.save(comment);
+        try {
+            commentRepository.save(comment);
 
-        return getById(comment.getId());
+            return getById(comment.getId());
+        }catch (Exception e){
+            throw new ServerErrorException("Error with Insert comment: " + e);
+        }
     }
 
     @Override
     public Page<Comment> getAll(Pageable pageable) {
         Page<Comment> comments = commentRepository.findAll(pageable);
+        if(comments.isEmpty()) throw new NotFoundException("Comments not found");
 
         return comments;
     }
@@ -43,24 +50,30 @@ public class CommentServiceImpl implements CommentService {
         try {
             Comment commentUpdated = updateFieldsComment(comment);
             commentRepository.save(commentUpdated);
+
             return commentUpdated;
-        } catch (JsonProcessingException e) {
-            throw new RuntimeException(e);
+        } catch (Exception e){
+            throw new ServerErrorException("Error with Update comment: " + e);
         }
     }
 
     @Override
     @Transactional
     public Comment deleteById(Long id) {
-        Comment comment = getById(id);
-        commentRepository.delete(comment);
+        try {
+            Comment comment = getById(id);
+            commentRepository.delete(comment);
 
-        return comment;
+            return comment;
+        }catch (Exception e){
+            throw new ServerErrorException("Error with Delete comment: " + e);
+        }
     }
 
     @Override
     public Comment getById(Long id) {
-        return commentRepository.findById(id).orElse(null);
+        return commentRepository.findById(id).orElseThrow(() ->
+                new NotFoundException("Comment with id - " + id + " not found"));
     }
 
     private Comment updateFieldsComment(Comment comment) throws JsonProcessingException {

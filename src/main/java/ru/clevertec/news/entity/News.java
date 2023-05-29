@@ -1,5 +1,6 @@
 package ru.clevertec.news.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -60,5 +61,6 @@ public class News {
     @Builder.Default
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
+    @JsonManagedReference
     private List<Comment> comments = new ArrayList<>();
 }
