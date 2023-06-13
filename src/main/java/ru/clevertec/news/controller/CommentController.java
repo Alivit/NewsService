@@ -1,6 +1,9 @@
 package ru.clevertec.news.controller;
 
+import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
@@ -18,9 +21,10 @@ import ru.clevertec.news.service.CommentService;
 
 @RestController
 @RequestMapping("/comments")
-@RequiredArgsConstructor
+@RequiredArgsConstructor()
 public class CommentController {
 
+    @Qualifier(value = "commentProxyService")
     private final CommentService commentService;
 
     @GetMapping

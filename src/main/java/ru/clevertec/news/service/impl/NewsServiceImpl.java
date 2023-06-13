@@ -76,6 +76,8 @@ public class NewsServiceImpl implements NewsService {
                 new NotFoundException("News with id - " + id + " not found"));
     }
 
+
+
     private News updateFieldsNews(News news) throws JsonProcessingException {
         News newsUpdated = getById(news.getId());
         Map<String, Object> fields = Mapper.toMap(news);

@@ -10,3 +10,7 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: update
+# Memory
+cache:
+  algorithm: lru
+  capacity: 5
