@@ -1,0 +1,7 @@
+databaseChangeLog:
+  #create table
+  - include:
+      file: db.changelog/changeset/ddl/create-tables.sql
+  #insert data
+  - include:
+      file: db.changelog/changeset/dml/insert-info.sql

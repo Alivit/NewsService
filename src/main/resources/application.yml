@@ -9,7 +9,9 @@ spring:
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
+  liquibase:
+    change-log: db.changelog/db.changelog-master.yaml
 # Memory
 cache:
   algorithm: lru
