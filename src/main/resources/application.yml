@@ -16,3 +16,6 @@ spring:
 cache:
   algorithm: lru
   capacity: 5
+springdoc:
+  swagger-ui:
+    operationsSorter: method

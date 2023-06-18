@@ -1,8 +1,6 @@
 package ru.clevertec.news.controller;
 
-import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -16,19 +14,20 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import ru.clevertec.news.controller.openapi.CommentOpenAPI;
 import ru.clevertec.news.entity.Comment;
 import ru.clevertec.news.service.CommentService;
 
 @RestController
 @RequestMapping("/comments")
 @RequiredArgsConstructor()
-public class CommentController {
+public class CommentController implements CommentOpenAPI {
 
     @Qualifier(value = "commentProxyService")
     private final CommentService commentService;
 
     @GetMapping
-    public ResponseEntity<Page<Comment>> getComments(Pageable pageable) {
+    public ResponseEntity<Page<Comment>> getAllComments(Pageable pageable) {
         Page<Comment> response = commentService.getAll(pageable);
 
         return new ResponseEntity<>(response, HttpStatus.FOUND);
@@ -42,21 +41,21 @@ public class CommentController {
     }
 
     @PostMapping
-    public ResponseEntity<Comment> createCertificate(@RequestBody Comment comment) {
+    public ResponseEntity<Comment> createComment(@RequestBody Comment comment) {
         Comment response = commentService.create(comment);
 
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 
     @PatchMapping()
-    public ResponseEntity<Comment> updateCertificate(@RequestBody Comment comment){
+    public ResponseEntity<Comment> updateComment(@RequestBody Comment comment){
         Comment response = commentService.update(comment);
 
         return ResponseEntity.ok(response);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Comment> deleteCertificate(@PathVariable Long id) {
+    public ResponseEntity<Comment> deleteComment(@PathVariable Long id) {
         Comment response = commentService.deleteById(id);
 
         return ResponseEntity.ok(response);

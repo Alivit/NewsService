@@ -33,6 +33,7 @@ public class ControllerErrorHandler {
         ErrorMessage error = ErrorMessage.builder()
                 .status(HttpStatus.INTERNAL_SERVER_ERROR.value())
                 .message(ex.getMessage())
+
                 .build();
 
         return new ResponseEntity<>(error, HttpStatus.INTERNAL_SERVER_ERROR);
