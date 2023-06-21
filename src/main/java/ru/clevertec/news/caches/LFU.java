@@ -1,18 +1,21 @@
 package ru.clevertec.news.caches;
 
+import lombok.Getter;
+
 import java.util.HashMap;
 import java.util.LinkedHashSet;
 
+@Getter
 public class LFU<K, V> implements CacheProvider<K, V> {
 
-    private final Long capacity;
+    private final long capacity;
     private Long min = -1L;
     private HashMap<K, V> storage;
     private HashMap<K, Long> counters;
     private HashMap<Long, LinkedHashSet<K>> lists;
 
 
-    public LFU(Long capacity) {
+    public LFU(long capacity) {
         this.capacity = capacity;
         storage = new HashMap<>();
         counters = new HashMap<>();

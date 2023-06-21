@@ -1,9 +1,12 @@
-package ru.clevertec.news.exception;
+package ru.clevertec.exception_handler.handler;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import ru.clevertec.exception_handler.exception.NotFoundException;
+import ru.clevertec.exception_handler.exception.ServerErrorException;
+import ru.clevertec.exception_handler.model.ErrorMessage;
 
 @RestControllerAdvice
 public class ControllerErrorHandler {

@@ -20,7 +20,6 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import lombok.experimental.Accessors;
 import ru.clevertec.news.entity.listener.NewsListener;
 
 import java.time.LocalDateTime;
@@ -56,7 +55,7 @@ public class News {
     private LocalDateTime updateDateNews;
 
     @OneToMany(
-            cascade = CascadeType.ALL, fetch = FetchType.EAGER,
+            cascade = CascadeType.REMOVE, fetch = FetchType.EAGER,
             orphanRemoval = true, mappedBy = "news"
     )
     @Builder.Default

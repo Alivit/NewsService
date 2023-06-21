@@ -9,5 +9,5 @@ import org.springframework.stereotype.Component;
 @ConfigurationProperties(prefix = "cache")
 public class CacheConfig {
     private String algorithm;
-    private Long capacity;
+    private long capacity;
 }

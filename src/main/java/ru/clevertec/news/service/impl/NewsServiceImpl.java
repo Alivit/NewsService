@@ -8,15 +8,17 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import ru.clevertec.logging.aop.annotation.Logging;
 import ru.clevertec.news.dao.NewsRepository;
 import ru.clevertec.news.entity.News;
-import ru.clevertec.news.exception.NotFoundException;
-import ru.clevertec.news.exception.ServerErrorException;
+import ru.clevertec.exception_handler.exception.NotFoundException;
+import ru.clevertec.exception_handler.exception.ServerErrorException;
 import ru.clevertec.news.mapper.Mapper;
 import ru.clevertec.news.service.NewsService;
 
 import java.util.Map;
 
+@Logging
 @Service
 @Transactional(readOnly = true)
 @RequiredArgsConstructor

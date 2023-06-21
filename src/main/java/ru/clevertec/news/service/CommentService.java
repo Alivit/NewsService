@@ -6,8 +6,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import ru.clevertec.news.entity.Comment;
 
-import java.util.Map;
-
 public interface CommentService {
 
     public Comment create(@Valid Comment comment);

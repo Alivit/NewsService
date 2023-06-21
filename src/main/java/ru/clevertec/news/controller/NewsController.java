@@ -1,6 +1,7 @@
 package ru.clevertec.news.controller;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
@@ -13,15 +14,18 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import ru.clevertec.logging.aop.annotation.Logging;
 import ru.clevertec.news.controller.openapi.NewsOpenAPI;
 import ru.clevertec.news.entity.News;
 import ru.clevertec.news.service.NewsService;
 
+@Logging
 @RestController
 @RequestMapping("/news")
 @RequiredArgsConstructor
 public class NewsController implements NewsOpenAPI {
 
+    @Qualifier(value = "newsProxy")
     private final NewsService newsService;
 
     @GetMapping

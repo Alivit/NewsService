@@ -6,8 +6,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import ru.clevertec.news.entity.News;
 
-import java.util.Map;
-
 public interface NewsService {
 
     public News create(@Valid News news);

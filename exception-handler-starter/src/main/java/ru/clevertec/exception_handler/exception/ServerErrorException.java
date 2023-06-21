@@ -1,4 +1,4 @@
-package ru.clevertec.news.exception;
+package ru.clevertec.exception_handler.exception;
 
 public class ServerErrorException extends RuntimeException{
 

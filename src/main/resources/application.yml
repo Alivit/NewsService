@@ -14,8 +14,17 @@ spring:
     change-log: db.changelog/db.changelog-master.yaml
 # Memory
 cache:
-  algorithm: lru
+  algorithm: LRU
   capacity: 5
+# Logging and Exception Handler
+app:
+  logging:
+    enabled: true
+  handler:
+    exception:
+      enabled: true
+# OpenAPI
 springdoc:
   swagger-ui:
     operationsSorter: method
+

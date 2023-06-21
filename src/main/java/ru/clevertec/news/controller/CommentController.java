@@ -14,16 +14,18 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import ru.clevertec.logging.aop.annotation.Logging;
 import ru.clevertec.news.controller.openapi.CommentOpenAPI;
 import ru.clevertec.news.entity.Comment;
 import ru.clevertec.news.service.CommentService;
 
+@Logging
 @RestController
 @RequestMapping("/comments")
 @RequiredArgsConstructor()
 public class CommentController implements CommentOpenAPI {
 
-    @Qualifier(value = "commentProxyService")
+    @Qualifier(value = "commentProxy")
     private final CommentService commentService;
 
     @GetMapping

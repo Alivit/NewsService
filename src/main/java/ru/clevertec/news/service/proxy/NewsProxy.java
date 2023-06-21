@@ -5,34 +5,37 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import ru.clevertec.logging.aop.annotation.Logging;
 import ru.clevertec.news.caches.CacheProvider;
 import ru.clevertec.news.caches.LFU;
 import ru.clevertec.news.caches.LRU;
 import ru.clevertec.news.config.CacheConfig;
-import ru.clevertec.news.entity.Comment;
-import ru.clevertec.news.service.CommentService;
+import ru.clevertec.news.entity.News;
+import ru.clevertec.news.service.NewsService;
 
+@Logging
 @Service
 @RequiredArgsConstructor
-public class CommentProxyService implements CommentService {
+public class NewsProxy implements NewsService {
 
-    @Qualifier("commentServiceImpl")
-    private final CommentService service;
-    private CacheProvider<Object, Object> cache;
+    @Qualifier("newsServiceImpl")
+    private final NewsService service;
+
+    private CacheProvider<Object, News> cache;
 
     {
         CacheConfig config = new CacheConfig();
-        if("lru".equalsIgnoreCase(config.getAlgorithm())){
-            cache = new LRU<>(config.getCapacity());
+        if("LRU".equalsIgnoreCase(config.getAlgorithm())){
+            cache =  new LRU<>(config.getCapacity());
         }
-        else if ("lfu".equalsIgnoreCase(config.getAlgorithm())) {
-            cache = new LFU<>(config.getCapacity());
+        else {
+            cache =  new LFU<>(config.getCapacity());
         }
     }
 
     @Override
-    public Comment create(Comment comment) {
-        Comment response = service.create(comment);
+    public News create(News news) {
+        News response = service.create(news);
 
         cache.put(response.getId(),response);
 
@@ -40,16 +43,16 @@ public class CommentProxyService implements CommentService {
     }
 
     @Override
-    public Page<Comment> getAll(Pageable pageable) {
+    public Page<News> getAll(Pageable pageable) {
         return service.getAll(pageable);
     }
 
     @Override
-    public Comment update(Comment comment) {
-        Comment response = service.update(comment);
+    public News update(News news) {
+        News response = service.update(news);
 
-        if(cache.containsValue(comment)){
-            cache.delete(comment.getId());
+        if(cache.containsValue(news)){
+            cache.delete(news.getId());
             cache.put(response.getId(),response);
         }
 
@@ -57,8 +60,8 @@ public class CommentProxyService implements CommentService {
     }
 
     @Override
-    public Comment deleteById(Long id) {
-        Comment response = service.deleteById(id);
+    public News deleteById(Long id) {
+        News response = service.deleteById(id);
 
         if (cache.containsValue(response)) {
             cache.delete(response.getId());
@@ -68,12 +71,12 @@ public class CommentProxyService implements CommentService {
     }
 
     @Override
-    public Comment getById(Long id) {
+    public News getById(Long id) {
         if (cache.containsKey(id)){
-            return (Comment) cache.get(id);
+            return cache.get(id);
         }
         else {
-            Comment response = service.getById(id);
+            News response = service.getById(id);
             cache.put(response.getId(), response);
 
             return response;

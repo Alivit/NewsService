@@ -1,15 +1,18 @@
 package ru.clevertec.news.caches;
 
+import lombok.Getter;
+
 import java.util.HashMap;
 import java.util.LinkedList;
 
+@Getter
 public class LRU<K, V> implements CacheProvider<K, V> {
 
-    private final Long capacity;
+    private final long capacity;
     private HashMap<K, V> storage;
     private LinkedList<K> queue;
 
-    public LRU(Long capacity) {
+    public LRU(long capacity) {
         this.capacity = capacity;
         storage = new HashMap<>();
         queue = new LinkedList<>();

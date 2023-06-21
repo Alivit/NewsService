@@ -15,7 +15,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import ru.clevertec.news.entity.News;
-import ru.clevertec.news.exception.ErrorMessage;
+import ru.clevertec.exception_handler.model.ErrorMessage;
 
 @Tag(name = "News", description = "The News API")
 public interface NewsOpenAPI {
