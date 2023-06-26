@@ -55,8 +55,10 @@ public class News {
     private LocalDateTime updateDateNews;
 
     @OneToMany(
-            cascade = CascadeType.REMOVE, fetch = FetchType.EAGER,
-            orphanRemoval = true, mappedBy = "news"
+            mappedBy = "news",
+            cascade = CascadeType.REMOVE,
+            fetch = FetchType.EAGER,
+            orphanRemoval = true
     )
     @Builder.Default
     @ToString.Exclude

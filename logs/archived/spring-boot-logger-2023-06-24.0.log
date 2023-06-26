@@ -1,0 +1,89 @@
+2023-06-24 12:40:02,571 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-06-24 12:40:02,691 INFO o.s.b.StartupInfoLogger [main] Starting NewsServiceApplication using Java 17.0.4.1 with PID 13128 (D:\Clevertec\news_service\build\classes\java\main started by 37529 in D:\Clevertec\news_service)
+2023-06-24 12:40:02,694 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-06-24 12:40:04,854 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-24 12:40:05,065 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 192 ms. Found 2 JPA repository interfaces.
+2023-06-24 12:40:07,136 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-06-24 12:40:07,163 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-24 12:40:07,165 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2023-06-24 12:40:07,167 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-24 12:40:07,480 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-06-24 12:40:07,484 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 4595 ms
+2023-06-24 12:40:07,930 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-06-24 12:40:08,475 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@33751d49
+2023-06-24 12:40:08,481 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-06-24 12:40:08,913 INFO l.l.c.JavaLogger [main] Set default schema name to public
+2023-06-24 12:40:09,157 INFO l.l.c.JavaLogger [main] Reading from public.databasechangelog
+2023-06-24 12:40:09,179 INFO l.l.c.JavaLogger [main] Changelog query completed.
+2023-06-24 12:40:09,474 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-24 12:40:09,686 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-24 12:40:09,692 INFO o.h.c.Environment [main] HHH000406: Using bytecode reflection optimizer
+2023-06-24 12:40:10,132 INFO o.h.b.i.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
+2023-06-24 12:40:10,583 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-24 12:40:10,720 INFO o.h.e.j.d.i.DialectFactoryImpl [main] HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@415262a0
+2023-06-24 12:40:11,380 INFO o.h.b.i.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
+2023-06-24 12:40:13,693 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-24 12:40:13,704 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-24 12:40:13,735 INFO r.c.n.c.CacheConfig [main] Cache properties initializing: CacheConfig(algorithm=LRU, capacity=5)
+2023-06-24 12:40:14,634 WARN o.s.c.s.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'commentController' defined in file [D:\Clevertec\news_service\build\classes\java\main\ru\clevertec\news\controller\CommentController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'commentProxy' defined in file [D:\Clevertec\news_service\build\classes\java\main\ru\clevertec\news\service\proxy\CommentProxy.class]: Failed to instantiate [ru.clevertec.news.service.proxy.CommentProxy$$SpringCGLIB$$0]: Constructor threw exception
+2023-06-24 12:40:14,635 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-24 12:40:14,640 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
+2023-06-24 12:40:14,664 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Shutdown completed.
+2023-06-24 12:40:14,669 INFO o.a.j.l.DirectJDKLog [main] Stopping service [Tomcat]
+2023-06-24 12:40:14,720 INFO o.s.b.a.l.ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-06-24 12:40:14,781 ERROR o.s.b.SpringApplication [main] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'commentController' defined in file [D:\Clevertec\news_service\build\classes\java\main\ru\clevertec\news\controller\CommentController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'commentProxy' defined in file [D:\Clevertec\news_service\build\classes\java\main\ru\clevertec\news\service\proxy\CommentProxy.class]: Failed to instantiate [ru.clevertec.news.service.proxy.CommentProxy$$SpringCGLIB$$0]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:245)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1189)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:941)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:733)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:435)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1305)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1294)
+	at ru.clevertec.news.NewsServiceApplication.main(NewsServiceApplication.java:17)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'commentProxy' defined in file [D:\Clevertec\news_service\build\classes\java\main\ru\clevertec\news\service\proxy\CommentProxy.class]: Failed to instantiate [ru.clevertec.news.service.proxy.CommentProxy$$SpringCGLIB$$0]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:326)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:314)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1189)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:888)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [ru.clevertec.news.service.proxy.CommentProxy$$SpringCGLIB$$0]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:110)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:323)
+	... 33 common frames omitted
+Caused by: java.lang.NullPointerException: Cannot invoke "ru.clevertec.news.config.CacheConfigImpl.getCapacity()" because "this.config" is null
+	at ru.clevertec.news.service.proxy.CommentProxy.<init>(CommentProxy.java:39)
+	at ru.clevertec.news.service.proxy.CommentProxy$$SpringCGLIB$$0.<init>(<generated>)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211)
+	... 35 common frames omitted

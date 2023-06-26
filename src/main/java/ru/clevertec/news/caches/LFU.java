@@ -14,7 +14,6 @@ public class LFU<K, V> implements CacheProvider<K, V> {
     private HashMap<K, Long> counters;
     private HashMap<Long, LinkedHashSet<K>> lists;
 
-
     public LFU(long capacity) {
         this.capacity = capacity;
         storage = new HashMap<>();
@@ -26,6 +25,7 @@ public class LFU<K, V> implements CacheProvider<K, V> {
     @Override
     public V get(K key) {
         if(!storage.containsKey(key)) {
+            System.out.println("lol");
             return null;
         }
         Long count = counters.get(key); // получения счётчика по ключу

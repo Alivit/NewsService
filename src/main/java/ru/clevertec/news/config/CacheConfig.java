@@ -1,13 +1,8 @@
 package ru.clevertec.news.config;
 
-import lombok.Data;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
+import ru.clevertec.news.caches.CacheProvider;
 
-@Data
-@Component
-@ConfigurationProperties(prefix = "cache")
-public class CacheConfig {
-    private String algorithm;
-    private long capacity;
+public interface CacheConfig <K,V>{
+
+    public CacheProvider<K,V> getCache();
 }

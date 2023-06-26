@@ -44,7 +44,7 @@ public class LoggingAspect {
 
         try {
             Object result = joinPoint.proceed(args);
-            log.info("Class {} {} object in database - {}",nameClass, nameMethod,  args);
+            log.info("Class {} {} object - {}",nameClass, nameMethod,  args);
 
             log.info("Class {}: method - {} returned parameters - {}",nameClass, nameMethod, result);
 

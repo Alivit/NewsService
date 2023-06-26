@@ -1,5 +1,6 @@
 package ru.clevertec.news.service.proxy;
 
+import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.domain.Page;
@@ -7,8 +8,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import ru.clevertec.logging.aop.annotation.Logging;
 import ru.clevertec.news.caches.CacheProvider;
-import ru.clevertec.news.caches.LFU;
-import ru.clevertec.news.caches.LRU;
 import ru.clevertec.news.config.CacheConfig;
 import ru.clevertec.news.entity.Comment;
 import ru.clevertec.news.service.CommentService;
@@ -20,17 +19,12 @@ public class CommentProxy implements CommentService {
 
     @Qualifier("commentServiceImpl")
     private final CommentService service;
-
+    private final CacheConfig<Long, Comment> config;
     private CacheProvider<Long, Comment> cache;
 
-    {
-        CacheConfig config = new CacheConfig();
-        if("LRU".equalsIgnoreCase(config.getAlgorithm())){
-            cache =  new LRU<>(config.getCapacity());
-        }
-        else {
-            cache =  new LFU<>(config.getCapacity());
-        }
+    @PostConstruct
+    void init(){
+        cache = config.getCache();
     }
 
     @Override
@@ -72,14 +66,11 @@ public class CommentProxy implements CommentService {
 
     @Override
     public Comment getById(Long id) {
-        if (cache.containsKey(id)){
-            return cache.get(id);
-        }
-        else {
+        if (!cache.containsKey(id)){
             Comment response = service.getById(id);
             cache.put(response.getId(), response);
-
-            return response;
         }
+
+        return cache.get(id);
     }
 }

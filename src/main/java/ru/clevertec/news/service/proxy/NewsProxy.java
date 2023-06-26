@@ -1,5 +1,6 @@
 package ru.clevertec.news.service.proxy;
 
+import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.domain.Page;
@@ -10,6 +11,8 @@ import ru.clevertec.news.caches.CacheProvider;
 import ru.clevertec.news.caches.LFU;
 import ru.clevertec.news.caches.LRU;
 import ru.clevertec.news.config.CacheConfig;
+import ru.clevertec.news.config.CacheConfigImpl;
+import ru.clevertec.news.entity.Comment;
 import ru.clevertec.news.entity.News;
 import ru.clevertec.news.service.NewsService;
 
@@ -21,16 +24,12 @@ public class NewsProxy implements NewsService {
     @Qualifier("newsServiceImpl")
     private final NewsService service;
 
-    private CacheProvider<Object, News> cache;
+    private final CacheConfig<Long, News> config;
+    private CacheProvider<Long, News> cache;
 
-    {
-        CacheConfig config = new CacheConfig();
-        if("LRU".equalsIgnoreCase(config.getAlgorithm())){
-            cache =  new LRU<>(config.getCapacity());
-        }
-        else {
-            cache =  new LFU<>(config.getCapacity());
-        }
+    @PostConstruct
+    void init(){
+        cache = config.getCache();
     }
 
     @Override
