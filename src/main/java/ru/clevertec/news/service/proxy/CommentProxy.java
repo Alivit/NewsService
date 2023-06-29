@@ -54,8 +54,8 @@ public class CommentProxy implements CommentService {
     }
 
     @Override
-    public Comment deleteById(Long id) {
-        Comment response = service.deleteById(id);
+    public Comment delete(Comment comment) {
+        Comment response = service.delete(comment);
 
         if (cache.containsValue(response)) {
             cache.delete(response.getId());

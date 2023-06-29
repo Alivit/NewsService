@@ -44,6 +44,10 @@ public class News {
     @EqualsAndHashCode.Exclude
     private Long id;
 
+    @NotBlank(message = "Username cannot be empty or null")
+    @Column(name = "username", unique = true)
+    private String username;
+
     @NotBlank(message = "Title cannot be empty or null")
     private String title;
     private String text;

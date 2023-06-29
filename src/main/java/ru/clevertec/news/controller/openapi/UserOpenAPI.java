@@ -14,15 +14,15 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
-import ru.clevertec.news.entity.News;
 import ru.clevertec.exception_handler.model.ErrorMessage;
+import ru.clevertec.news.entity.User;
 
-@Tag(name = "News", description = "The News API")
-public interface NewsOpenAPI {
+@Tag(name = "User", description = "The User API")
+public interface UserOpenAPI {
 
     @Operation(
-            operationId = "getAllNews",
-            summary = "Method of getting a list of news",
+            operationId = "getAllUser",
+            summary = "Method of getting a list of users",
             parameters = @Parameter(
                     name = "pageable",
                     required = true,
@@ -41,17 +41,17 @@ public interface NewsOpenAPI {
     @ApiResponses( value = {
             @ApiResponse(
                     responseCode = "302",
-                    description = "Successful response with a list of news",
+                    description = "Successful response with a list of users",
                     content = @Content(
                             mediaType = "application/json",
-                            schema = @Schema(implementation = News.class),
+                            schema = @Schema(implementation = User.class),
                             examples = @ExampleObject("""
                                       {
                                         "id": 20,
                                         "title": "New Title",
                                         "text": "New Text",
-                                        "createDateNews": "2023-06-18T17:34:45.426Z",
-                                        "updateDateNews": "2023-06-18T17:34:45.426Z",
+                                        "createDateUser": "2023-06-18T17:34:45.426Z",
+                                        "updateDateUser": "2023-06-18T17:34:45.426Z",
                                         "comments": [
                                           {
                                             "id": 4,
@@ -59,7 +59,7 @@ public interface NewsOpenAPI {
                                             "text": "New Text",
                                             "createDateComment": "2023-06-18T17:34:45.426Z",
                                             "updateDateComment": "2023-06-18T17:34:45.426Z",
-                                            "news": "string"
+                                            "user": "string"
                                           }
                                         ]                         
                                       }"""
@@ -68,14 +68,14 @@ public interface NewsOpenAPI {
             ),
             @ApiResponse(
                     responseCode = "404",
-                    description = "The server not found news",
+                    description = "The server not found user",
                     content = @Content(
                             mediaType = "application/json",
                             schema = @Schema(implementation = ErrorMessage.class),
                             examples = @ExampleObject("""
                                     {
                                       "status": 404,
-                                      "message": "News not found",
+                                      "message": "User not found",
                                       "time": "2023-06-18T18:47:43.225Z"
                                     }
                                     """
@@ -83,11 +83,11 @@ public interface NewsOpenAPI {
                     )
             )
     })
-    public ResponseEntity<Page<News>> getAllNews(Pageable pageable);
+    public ResponseEntity<Page<User>> getAllUser(Pageable pageable);
 
     @Operation(
-            operationId = "getNewsById",
-            summary = "Method of receiving news by the id",
+            operationId = "getUserById",
+            summary = "Method of receiving user by the id",
             parameters = @Parameter(
                     name = "id",
                     required = true,
@@ -98,17 +98,17 @@ public interface NewsOpenAPI {
     @ApiResponses( value = {
             @ApiResponse(
                     responseCode = "302",
-                    description = "Successful response with founded news",
+                    description = "Successful response with founded user",
                     content = @Content(
                             mediaType = "application/json",
-                            schema = @Schema(implementation = News.class),
+                            schema = @Schema(implementation = User.class),
                             examples = @ExampleObject("""
                                       {
                                         "id": 20,
                                         "title": "New Title",
                                         "text": "New Text",
-                                        "createDateNews": "2023-06-18T17:34:45.426Z",
-                                        "updateDateNews": "2023-06-18T17:34:45.426Z",
+                                        "createDateUser": "2023-06-18T17:34:45.426Z",
+                                        "updateDateUser": "2023-06-18T17:34:45.426Z",
                                         "comments": [
                                           {
                                             "id": 4,
@@ -116,7 +116,7 @@ public interface NewsOpenAPI {
                                             "text": "New Text",
                                             "createDateComment": "2023-06-18T17:34:45.426Z",
                                             "updateDateComment": "2023-06-18T17:34:45.426Z",
-                                            "news": "string"
+                                            "user": "string"
                                           }
                                         ]                         
                                       }"""
@@ -125,14 +125,14 @@ public interface NewsOpenAPI {
             ),
             @ApiResponse(
                     responseCode = "404",
-                    description = "The server not found news",
+                    description = "The server not found user",
                     content = @Content(
                             mediaType = "application/json",
                             schema = @Schema(implementation = ErrorMessage.class),
                             examples = @ExampleObject("""
                                     {
                                       "status": 404,
-                                      "message": "News with id - 20 not found",
+                                      "message": "User with id - 20 not found",
                                       "time": "2023-06-18T18:47:43.225Z"
                                     }
                                     """
@@ -140,22 +140,22 @@ public interface NewsOpenAPI {
                     )
             )
     })
-    public ResponseEntity<News> getNewsById(@PathVariable Long id);
+    public ResponseEntity<User> getUserById(@PathVariable Long id);
 
     @Operation(
-            operationId = "createNews",
-            summary = "Method of news creation",
+            operationId = "createUser",
+            summary = "Method of user creation",
             requestBody = @RequestBody(
-                    description = "RequestBody for News",
+                    description = "RequestBody for User",
                     content = @Content(
-                            schema = @Schema(implementation = News.class),
+                            schema = @Schema(implementation = User.class),
                             examples = @ExampleObject("""
                                       {
                                         "id": 20,
                                         "title": "New Title",
                                         "text": "New Text",
-                                        "createDateNews": "2023-06-18T17:34:45.426Z",
-                                        "updateDateNews": "2023-06-18T17:34:45.426Z",
+                                        "createDateUser": "2023-06-18T17:34:45.426Z",
+                                        "updateDateUser": "2023-06-18T17:34:45.426Z",
                                         "comments": [
                                           {
                                             "id": 4,
@@ -163,7 +163,7 @@ public interface NewsOpenAPI {
                                             "text": "New Text",
                                             "createDateComment": "2023-06-18T17:34:45.426Z",
                                             "updateDateComment": "2023-06-18T17:34:45.426Z",
-                                            "news": "string"
+                                            "user": "string"
                                           }
                                         ]                         
                                       }"""
@@ -174,17 +174,17 @@ public interface NewsOpenAPI {
     @ApiResponses( value = {
             @ApiResponse(
                     responseCode = "201",
-                    description = "Successful response with the created news",
+                    description = "Successful response with the created user",
                     content = @Content(
                             mediaType = "application/json",
-                            schema = @Schema(implementation = News.class),
+                            schema = @Schema(implementation = User.class),
                             examples = @ExampleObject("""
                                       {
                                         "id": 20,
                                         "title": "New Title",
                                         "text": "New Text",
-                                        "createDateNews": "2023-06-18T17:34:45.426Z",
-                                        "updateDateNews": "2023-06-18T17:34:45.426Z",
+                                        "createDateUser": "2023-06-18T17:34:45.426Z",
+                                        "updateDateUser": "2023-06-18T17:34:45.426Z",
                                         "comments": [
                                           {
                                             "id": 4,
@@ -192,7 +192,7 @@ public interface NewsOpenAPI {
                                             "text": "New Text",
                                             "createDateComment": "2023-06-18T17:34:45.426Z",
                                             "updateDateComment": "2023-06-18T17:34:45.426Z",
-                                            "news": "string"
+                                            "user": "string"
                                           }
                                         ]                         
                                       }"""
@@ -208,7 +208,7 @@ public interface NewsOpenAPI {
                             examples = @ExampleObject("""
                                     {
                                       "status": 500,
-                                      "message": "Error with Insert news",
+                                      "message": "Error with Insert user",
                                       "time": "2023-06-18T18:47:43.225Z"
                                     }
                                     """
@@ -216,22 +216,22 @@ public interface NewsOpenAPI {
                     )
             )
     })
-    public ResponseEntity<News> createNews(@RequestBody News news);
+    public ResponseEntity<User> createUser(@RequestBody User user);
 
     @Operation(
-            operationId = "updateNews",
-            summary = "Method of news updating",
+            operationId = "updateUser",
+            summary = "Method of user updating",
             requestBody = @RequestBody(
-                    description = "RequestBody for News",
+                    description = "RequestBody for User",
                     content = @Content(
-                            schema = @Schema(implementation = News.class),
+                            schema = @Schema(implementation = User.class),
                             examples = @ExampleObject("""
                                       {
                                         "id": 20,
                                         "title": "New Title",
                                         "text": "New Text",
-                                        "createDateNews": "2023-06-18T17:34:45.426Z",
-                                        "updateDateNews": "2023-06-18T17:34:45.426Z",
+                                        "createDateUser": "2023-06-18T17:34:45.426Z",
+                                        "updateDateUser": "2023-06-18T17:34:45.426Z",
                                         "comments": [
                                           {
                                             "id": 4,
@@ -239,7 +239,7 @@ public interface NewsOpenAPI {
                                             "text": "New Text",
                                             "createDateComment": "2023-06-18T17:34:45.426Z",
                                             "updateDateComment": "2023-06-18T17:34:45.426Z",
-                                            "news": "string"
+                                            "user": "string"
                                           }
                                         ]                         
                                       }"""
@@ -250,17 +250,17 @@ public interface NewsOpenAPI {
     @ApiResponses( value = {
             @ApiResponse(
                     responseCode = "200",
-                    description = "Successful response with the updated news",
+                    description = "Successful response with the updated user",
                     content = @Content(
                             mediaType = "application/json",
-                            schema = @Schema(implementation = News.class),
+                            schema = @Schema(implementation = User.class),
                             examples = @ExampleObject("""
                                       {
                                         "id": 20,
                                         "title": "New Title",
                                         "text": "New Text",
-                                        "createDateNews": "2023-06-18T17:34:45.426Z",
-                                        "updateDateNews": "2023-06-18T17:34:45.426Z",
+                                        "createDateUser": "2023-06-18T17:34:45.426Z",
+                                        "updateDateUser": "2023-06-18T17:34:45.426Z",
                                         "comments": [
                                           {
                                             "id": 4,
@@ -268,7 +268,7 @@ public interface NewsOpenAPI {
                                             "text": "New Text",
                                             "createDateComment": "2023-06-18T17:34:45.426Z",
                                             "updateDateComment": "2023-06-18T17:34:45.426Z",
-                                            "news": "string"
+                                            "user": "string"
                                           }
                                         ]                         
                                       }"""
@@ -284,7 +284,7 @@ public interface NewsOpenAPI {
                             examples = @ExampleObject("""
                                     {
                                       "status": 500,
-                                      "message": "Error with Update news",
+                                      "message": "Error with Update user",
                                       "time": "2023-06-18T18:47:43.225Z"
                                     }
                                     """
@@ -293,14 +293,14 @@ public interface NewsOpenAPI {
             ),
             @ApiResponse(
                     responseCode = "404",
-                    description = "The server not found news",
+                    description = "The server not found user",
                     content = @Content(
                             mediaType = "application/json",
                             schema = @Schema(implementation = ErrorMessage.class),
                             examples = @ExampleObject("""
                                     {
                                       "status": 404,
-                                      "message": "News with id - 20 not found",
+                                      "message": "User with id - 20 not found",
                                       "time": "2023-06-18T18:47:43.225Z"
                                     }
                                     """
@@ -308,51 +308,32 @@ public interface NewsOpenAPI {
                     )
             )
     })
-    public ResponseEntity<News> updateNews(@RequestBody News news);
+    public ResponseEntity<User> updateUser(@RequestBody User user);
 
     @Operation(
-            operationId = "deleteNews",
-            summary = "Method of deleting news by the id",
-            requestBody = @RequestBody(
-                    description = "RequestBody for News",
-                    content = @Content(
-                            schema = @Schema(implementation = News.class),
-                            examples = @ExampleObject("""
-                                      {
-                                        "id": 20,
-                                        "title": "New Title",
-                                        "text": "New Text",
-                                        "createDateNews": "2023-06-18T17:34:45.426Z",
-                                        "updateDateNews": "2023-06-18T17:34:45.426Z",
-                                        "comments": [
-                                          {
-                                            "id": 4,
-                                            "username": "Ivan",
-                                            "text": "New Text",
-                                            "createDateComment": "2023-06-18T17:34:45.426Z",
-                                            "updateDateComment": "2023-06-18T17:34:45.426Z",
-                                            "news": "string"
-                                          }
-                                        ]                         
-                                      }"""
-                            )
-                    )
+            operationId = "deleteUser",
+            summary = "Method of deleting user by the id",
+            parameters = @Parameter(
+                    name = "id",
+                    required = true,
+                    description = "Enter id here",
+                    example = "20"
             )
     )
     @ApiResponses( value = {
             @ApiResponse(
                     responseCode = "302",
-                    description = "Successful response with deleted news",
+                    description = "Successful response with deleted user",
                     content = @Content(
                             mediaType = "application/json",
-                            schema = @Schema(implementation = News.class),
+                            schema = @Schema(implementation = User.class),
                             examples = @ExampleObject("""
                                       {
                                         "id": 20,
                                         "title": "New Title",
                                         "text": "New Text",
-                                        "createDateNews": "2023-06-18T17:34:45.426Z",
-                                        "updateDateNews": "2023-06-18T17:34:45.426Z",
+                                        "createDateUser": "2023-06-18T17:34:45.426Z",
+                                        "updateDateUser": "2023-06-18T17:34:45.426Z",
                                         "comments": [
                                           {
                                             "id": 4,
@@ -360,7 +341,7 @@ public interface NewsOpenAPI {
                                             "text": "New Text",
                                             "createDateComment": "2023-06-18T17:34:45.426Z",
                                             "updateDateComment": "2023-06-18T17:34:45.426Z",
-                                            "news": "string"
+                                            "user": "string"
                                           }
                                         ]                         
                                       }"""
@@ -369,14 +350,14 @@ public interface NewsOpenAPI {
             ),
             @ApiResponse(
                     responseCode = "404",
-                    description = "The server not found news",
+                    description = "The server not found user",
                     content = @Content(
                             mediaType = "application/json",
                             schema = @Schema(implementation = ErrorMessage.class),
                             examples = @ExampleObject("""
                                     {
                                       "status": 404,
-                                      "message": "News with id - 20 not found",
+                                      "message": "User with id - 20 not found",
                                       "time": "2023-06-18T18:47:43.225Z"
                                     }
                                     """
@@ -384,5 +365,5 @@ public interface NewsOpenAPI {
                     )
             )
     })
-    public ResponseEntity<News> deleteNews(@RequestBody News news);
+    public ResponseEntity<User> deleteUser(@PathVariable Long id);
 }

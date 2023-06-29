@@ -312,12 +312,31 @@ public interface CommentOpenAPI {
 
     @Operation(
             operationId = "deleteComment",
-            summary = "Method of deleting comment by the id",
-            parameters = @Parameter(
-                    name = "id",
-                    required = true,
-                    description = "Enter id here",
-                    example = "4"
+            summary = "Method of deleting comment",
+            requestBody = @RequestBody(
+                    description = "RequestBody for Comment",
+                    content = @Content(
+                            schema = @Schema(implementation = Comment.class),
+                            examples = @ExampleObject("""
+                                    {
+                                          "id": 4,
+                                          "username": "Ivan",
+                                          "text": "New Text",
+                                          "createDateComment": "2023-06-18T20:28:25.840Z",
+                                          "updateDateComment": "2023-06-18T20:28:25.840Z",
+                                          "news": {
+                                            "id": 20,
+                                            "title": "New Title",
+                                            "text": "New Text",
+                                            "createDateNews": "2023-06-18T20:28:25.841Z",
+                                            "updateDateNews": "2023-06-18T20:28:25.841Z",
+                                            "comments": [
+                                              "string"
+                                            ]
+                                          }
+                                    }"""
+                            )
+                    )
             )
     )
     @ApiResponses( value = {
@@ -365,5 +384,5 @@ public interface CommentOpenAPI {
                     )
             )
     })
-    public ResponseEntity<Comment> deleteComment(@PathVariable Long id);
+    public ResponseEntity<Comment> deleteComment(@RequestBody Comment comment);
 }

@@ -6,6 +6,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -23,12 +24,14 @@ import ru.clevertec.news.service.NewsService;
 @RestController
 @RequestMapping("/news")
 @RequiredArgsConstructor
+@PreAuthorize("hasAuthority('JOURNALIST')")
 public class NewsController implements NewsOpenAPI {
 
     @Qualifier(value = "newsProxy")
     private final NewsService newsService;
 
     @GetMapping
+    @PreAuthorize("permitAll()")
     public ResponseEntity<Page<News>> getAllNews(Pageable pageable) {
         Page<News> response = newsService.getAll(pageable);
 
@@ -36,6 +39,7 @@ public class NewsController implements NewsOpenAPI {
     }
 
     @GetMapping("/{id}")
+    @PreAuthorize("permitAll()")
     public ResponseEntity<News> getNewsById(@PathVariable Long id){
         News response = newsService.getById(id);
 
@@ -43,6 +47,7 @@ public class NewsController implements NewsOpenAPI {
     }
 
     @PostMapping
+    @PreAuthorize("#news.username == authentication.principal.username || hasAuthority('ADMIN')")
     public ResponseEntity<News> createNews(@RequestBody News news) {
         News response = newsService.create(news);
 
@@ -50,6 +55,7 @@ public class NewsController implements NewsOpenAPI {
     }
 
     @PatchMapping()
+    @PreAuthorize("#news.username == authentication.principal.username || hasAuthority('ADMIN')")
     public ResponseEntity<News> updateNews(@RequestBody News news){
         News response = newsService.update(news);
 
@@ -57,8 +63,9 @@ public class NewsController implements NewsOpenAPI {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<News> deleteNews(@PathVariable Long id) {
-        News response = newsService.deleteById(id);
+    @PreAuthorize("#news.username == authentication.principal.username || hasAuthority('ADMIN')")
+    public ResponseEntity<News> deleteNews(@RequestBody News news) {
+        News response = newsService.delete(news);
 
         return ResponseEntity.ok(response);
     }

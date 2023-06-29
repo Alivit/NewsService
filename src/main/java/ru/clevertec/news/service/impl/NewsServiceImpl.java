@@ -13,7 +13,7 @@ import ru.clevertec.news.dao.NewsRepository;
 import ru.clevertec.news.entity.News;
 import ru.clevertec.exception_handler.exception.NotFoundException;
 import ru.clevertec.exception_handler.exception.ServerErrorException;
-import ru.clevertec.news.mapper.Mapper;
+import ru.clevertec.news.util.Mapper;
 import ru.clevertec.news.service.NewsService;
 
 import java.util.Map;
@@ -61,12 +61,12 @@ public class NewsServiceImpl implements NewsService {
 
     @Override
     @Transactional
-    public News deleteById(Long id) {
+    public News delete(News news) {
         try {
-            News news = getById(id);
-            newsRepository.delete(news);
+            News deletedNews = getById(news.getId());
+            newsRepository.delete(deletedNews);
 
-            return news;
+            return deletedNews;
         } catch (Exception e){
             throw new ServerErrorException("Error with Delete news: " + e);
         }

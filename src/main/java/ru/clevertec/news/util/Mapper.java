@@ -1,4 +1,4 @@
-package ru.clevertec.news.mapper;
+package ru.clevertec.news.util;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;

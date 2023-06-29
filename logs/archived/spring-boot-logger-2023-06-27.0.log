@@ -1,0 +1,204 @@
+2023-06-27 15:33:18,746 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-06-27 15:33:18,896 INFO o.s.b.StartupInfoLogger [main] Starting NewsServiceApplication using Java 17.0.4.1 with PID 11760 (D:\Clevertec\news_service\build\classes\java\main started by 37529 in D:\Clevertec\news_service)
+2023-06-27 15:33:18,900 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-06-27 15:33:21,210 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-27 15:33:21,529 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 276 ms. Found 2 JPA repository interfaces.
+2023-06-27 15:33:23,827 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-06-27 15:33:23,865 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-27 15:33:23,868 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2023-06-27 15:33:23,869 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-27 15:33:24,170 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-06-27 15:33:24,175 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 5104 ms
+2023-06-27 15:33:24,681 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-06-27 15:33:25,303 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1552da16
+2023-06-27 15:33:25,309 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-06-27 15:33:25,809 INFO l.l.c.JavaLogger [main] Set default schema name to public
+2023-06-27 15:33:26,063 INFO l.l.c.JavaLogger [main] Reading from public.databasechangelog
+2023-06-27 15:33:26,084 INFO l.l.c.JavaLogger [main] Changelog query completed.
+2023-06-27 15:33:26,436 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-27 15:33:26,652 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-27 15:33:26,661 INFO o.h.c.Environment [main] HHH000406: Using bytecode reflection optimizer
+2023-06-27 15:33:27,107 INFO o.h.b.i.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
+2023-06-27 15:33:27,547 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-27 15:33:27,697 INFO o.h.e.j.d.i.DialectFactoryImpl [main] HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@50c2ef56
+2023-06-27 15:33:28,405 INFO o.h.b.i.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
+2023-06-27 15:33:30,815 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-27 15:33:30,825 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-27 15:33:30,870 INFO r.c.n.c.CacheConfigImpl [main] Cache properties initializing: CacheConfigImpl(algorithm=LFU, capacity=5)
+2023-06-27 15:33:32,418 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-27 15:33:32,928 INFO r.c.e.c.HandlerProperties [main] Handler properties initializing: HandlerProperties(enabled=true)
+2023-06-27 15:33:34,140 WARN o.s.b.a.s.s.UserDetailsServiceAutoConfiguration [main] 
+
+Using generated security password: 31b42dc0-5ccb-4fdc-af53-246b11a8fa41
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-06-27 15:33:34,570 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3503e68e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7c2d4398, org.springframework.security.web.context.SecurityContextHolderFilter@2080ee70, org.springframework.security.web.header.HeaderWriterFilter@7e00a43e, org.springframework.security.web.csrf.CsrfFilter@3868c92e, org.springframework.security.web.authentication.logout.LogoutFilter@41cec7b0, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@fbc1de9, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6ccf06f1, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@310db5c4, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@198c97d0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@276ae21c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1633962a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7280785f, org.springframework.security.web.access.ExceptionTranslationFilter@41ff98dc, org.springframework.security.web.access.intercept.AuthorizationFilter@3bf31f3e]
+2023-06-27 15:33:34,644 INFO r.c.e.c.HandlerAutoConfiguration [main] HandlerAutoConfiguration initialized
+2023-06-27 15:33:34,649 INFO r.c.l.c.LoggingAutoConfiguration [main] LoggingAutoConfiguration initialized
+2023-06-27 15:33:34,654 INFO r.c.l.c.LoggingProperties [main] Logging properties initializing: LoggingProperties(enabled=true)
+2023-06-27 15:33:34,698 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-06-27 15:33:34,755 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-27 15:33:34,781 INFO o.s.b.StartupInfoLogger [main] Started NewsServiceApplication in 17.775 seconds (process running for 20.105)
+2023-06-27 15:33:53,366 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-27 15:33:53,367 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-06-27 15:33:53,371 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 3 ms
+2023-06-27 17:16:45,695 WARN c.z.h.p.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h32m50s142ms528µs800ns).
+2023-06-27 17:48:40,445 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-06-27 17:48:40,550 INFO o.s.b.StartupInfoLogger [main] Starting NewsServiceApplication using Java 17.0.4.1 with PID 29000 (D:\Clevertec\news_service\build\classes\java\main started by 37529 in D:\Clevertec\news_service)
+2023-06-27 17:48:40,554 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-06-27 17:48:42,734 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-27 17:48:42,968 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 213 ms. Found 2 JPA repository interfaces.
+2023-06-27 17:48:45,090 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-06-27 17:48:45,117 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-27 17:48:45,119 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2023-06-27 17:48:45,120 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-27 17:48:45,498 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-06-27 17:48:45,502 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 4814 ms
+2023-06-27 17:48:46,062 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-06-27 17:48:46,594 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@113eed88
+2023-06-27 17:48:46,598 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-06-27 17:48:47,045 INFO l.l.c.JavaLogger [main] Set default schema name to public
+2023-06-27 17:48:47,290 INFO l.l.c.JavaLogger [main] Reading from public.databasechangelog
+2023-06-27 17:48:47,312 INFO l.l.c.JavaLogger [main] Changelog query completed.
+2023-06-27 17:48:47,648 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-27 17:48:47,827 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-27 17:48:47,838 INFO o.h.c.Environment [main] HHH000406: Using bytecode reflection optimizer
+2023-06-27 17:48:48,312 INFO o.h.b.i.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
+2023-06-27 17:48:48,763 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-27 17:48:48,962 INFO o.h.e.j.d.i.DialectFactoryImpl [main] HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@552088cc
+2023-06-27 17:48:49,627 INFO o.h.b.i.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
+2023-06-27 17:48:51,948 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-27 17:48:51,961 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-27 17:48:52,000 INFO r.c.n.c.CacheConfigImpl [main] Cache properties initializing: CacheConfigImpl(algorithm=LFU, capacity=5)
+2023-06-27 17:48:53,349 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-27 17:48:53,419 WARN o.s.b.a.s.s.UserDetailsServiceAutoConfiguration [main] 
+
+Using generated security password: b0e1395e-d74f-4371-b02c-fcaaade5ab5f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-06-27 17:48:54,420 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1f8e1096, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@13a35d3b, org.springframework.security.web.context.SecurityContextHolderFilter@4a1cafb2, org.springframework.security.web.header.HeaderWriterFilter@402d45c6, org.springframework.security.web.authentication.logout.LogoutFilter@678a7489, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3638a852, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@313c3cb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@35800dea, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@71739267, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1cd93693, org.springframework.security.web.access.ExceptionTranslationFilter@52d625bd, org.springframework.security.web.access.intercept.AuthorizationFilter@747b8f5c]
+2023-06-27 17:48:54,698 INFO r.c.e.c.HandlerProperties [main] Handler properties initializing: HandlerProperties(enabled=true)
+2023-06-27 17:48:55,467 INFO r.c.e.c.HandlerAutoConfiguration [main] HandlerAutoConfiguration initialized
+2023-06-27 17:48:55,469 INFO r.c.l.c.LoggingAutoConfiguration [main] LoggingAutoConfiguration initialized
+2023-06-27 17:48:55,474 INFO r.c.l.c.LoggingProperties [main] Logging properties initializing: LoggingProperties(enabled=true)
+2023-06-27 17:48:55,523 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-06-27 17:48:55,598 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-27 17:48:55,624 INFO o.s.b.StartupInfoLogger [main] Started NewsServiceApplication in 16.752 seconds (process running for 21.601)
+2023-06-27 17:49:08,485 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-27 17:49:08,486 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-06-27 17:49:08,489 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 2 ms
+2023-06-27 17:49:08,753 WARN o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [126] milliseconds.
+2023-06-27 17:49:20,710 INFO r.c.l.a.a.LoggingAspect [http-nio-8080-exec-2] Controller request: Method - getAllComments accepted parameters: [Page request [number: 0, size 20, sort: UNSORTED]]
+2023-06-27 17:49:20,713 INFO r.c.l.a.a.LoggingAspect [http-nio-8080-exec-2] Class CommentProxy: method getAll accepted parameters - [Page request [number: 0, size 20, sort: UNSORTED]]
+2023-06-27 17:49:20,729 INFO r.c.l.a.a.LoggingAspect [http-nio-8080-exec-2] Class CommentServiceImpl: method getAll accepted parameters - [Page request [number: 0, size 20, sort: UNSORTED]]
+2023-06-27 17:49:21,175 INFO r.c.l.a.a.LoggingAspect [http-nio-8080-exec-2] Class CommentServiceImpl getAll object - [Page request [number: 0, size 20, sort: UNSORTED]]
+2023-06-27 17:49:21,176 INFO r.c.l.a.a.LoggingAspect [http-nio-8080-exec-2] Class CommentServiceImpl: method - getAll returned parameters - Page 1 of 10 containing ru.clevertec.news.entity.Comment instances
+2023-06-27 17:49:21,179 INFO r.c.l.a.a.LoggingAspect [http-nio-8080-exec-2] Class CommentProxy getAll object - [Page request [number: 0, size 20, sort: UNSORTED]]
+2023-06-27 17:49:21,180 INFO r.c.l.a.a.LoggingAspect [http-nio-8080-exec-2] Class CommentProxy: method - getAll returned parameters - Page 1 of 10 containing ru.clevertec.news.entity.Comment instances
+2023-06-27 17:49:21,197 INFO r.c.l.a.a.LoggingAspect [http-nio-8080-exec-2] Controller response: Method - getAllComments return parameters: <302 FOUND Found,Page 1 of 10 containing ru.clevertec.news.entity.Comment instances,[]>
+2023-06-27 17:49:24,247 INFO r.c.l.a.a.LoggingAspect [http-nio-8080-exec-9] Controller request: Method - getAllComments accepted parameters: [Page request [number: 0, size 20, sort: UNSORTED]]
+2023-06-27 17:49:24,248 INFO r.c.l.a.a.LoggingAspect [http-nio-8080-exec-9] Class CommentProxy: method getAll accepted parameters - [Page request [number: 0, size 20, sort: UNSORTED]]
+2023-06-27 17:49:24,250 INFO r.c.l.a.a.LoggingAspect [http-nio-8080-exec-9] Class CommentServiceImpl: method getAll accepted parameters - [Page request [number: 0, size 20, sort: UNSORTED]]
+2023-06-27 17:49:24,289 INFO r.c.l.a.a.LoggingAspect [http-nio-8080-exec-9] Class CommentServiceImpl getAll object - [Page request [number: 0, size 20, sort: UNSORTED]]
+2023-06-27 17:49:24,290 INFO r.c.l.a.a.LoggingAspect [http-nio-8080-exec-9] Class CommentServiceImpl: method - getAll returned parameters - Page 1 of 10 containing ru.clevertec.news.entity.Comment instances
+2023-06-27 17:49:24,292 INFO r.c.l.a.a.LoggingAspect [http-nio-8080-exec-9] Class CommentProxy getAll object - [Page request [number: 0, size 20, sort: UNSORTED]]
+2023-06-27 17:49:24,293 INFO r.c.l.a.a.LoggingAspect [http-nio-8080-exec-9] Class CommentProxy: method - getAll returned parameters - Page 1 of 10 containing ru.clevertec.news.entity.Comment instances
+2023-06-27 17:49:24,294 INFO r.c.l.a.a.LoggingAspect [http-nio-8080-exec-9] Controller response: Method - getAllComments return parameters: <302 FOUND Found,Page 1 of 10 containing ru.clevertec.news.entity.Comment instances,[]>
+2023-06-27 21:53:06,802 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-06-27 21:53:06,977 INFO o.s.b.StartupInfoLogger [main] Starting NewsServiceApplication using Java 17.0.4.1 with PID 33064 (D:\Clevertec\news_service\build\classes\java\main started by 37529 in D:\Clevertec\news_service)
+2023-06-27 21:53:06,981 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-06-27 21:53:09,679 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-27 21:53:09,993 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 284 ms. Found 3 JPA repository interfaces.
+2023-06-27 21:53:12,425 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-06-27 21:53:12,456 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-27 21:53:12,460 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2023-06-27 21:53:12,460 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-27 21:53:12,812 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-06-27 21:53:12,816 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 5654 ms
+2023-06-27 21:53:13,339 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-06-27 21:53:13,889 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@98637a2
+2023-06-27 21:53:13,894 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-06-27 21:53:14,402 INFO l.l.c.JavaLogger [main] Set default schema name to public
+2023-06-27 21:53:14,673 INFO l.l.c.JavaLogger [main] Reading from public.databasechangelog
+2023-06-27 21:53:14,703 INFO l.l.c.JavaLogger [main] Changelog query completed.
+2023-06-27 21:53:15,061 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-27 21:53:15,272 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-27 21:53:15,282 INFO o.h.c.Environment [main] HHH000406: Using bytecode reflection optimizer
+2023-06-27 21:53:15,767 INFO o.h.b.i.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
+2023-06-27 21:53:16,209 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-27 21:53:16,455 INFO o.h.e.j.d.i.DialectFactoryImpl [main] HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@570299e3
+2023-06-27 21:53:17,294 INFO o.h.b.i.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
+2023-06-27 21:53:19,939 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-27 21:53:19,945 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-27 21:53:19,973 INFO r.c.n.c.CacheConfigImpl [main] Cache properties initializing: CacheConfigImpl(algorithm=LFU, capacity=5)
+2023-06-27 21:53:21,809 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-27 21:53:23,024 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@16576a6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@70b037ac, org.springframework.security.web.context.SecurityContextHolderFilter@12ff3df, org.springframework.security.web.header.HeaderWriterFilter@280cb0b4, org.springframework.security.web.authentication.logout.LogoutFilter@261d7ee2, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@b257072, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3e1c566d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6347ebbc, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@1d0590bc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1dbe592f, org.springframework.security.web.access.ExceptionTranslationFilter@36134f3, org.springframework.security.web.access.intercept.AuthorizationFilter@3edb09b9]
+2023-06-27 21:53:23,270 INFO r.c.e.c.HandlerProperties [main] Handler properties initializing: HandlerProperties(enabled=true)
+2023-06-27 21:53:24,141 INFO r.c.e.c.HandlerAutoConfiguration [main] HandlerAutoConfiguration initialized
+2023-06-27 21:53:24,144 INFO r.c.l.c.LoggingAutoConfiguration [main] LoggingAutoConfiguration initialized
+2023-06-27 21:53:24,148 INFO r.c.l.c.LoggingProperties [main] Logging properties initializing: LoggingProperties(enabled=true)
+2023-06-27 21:53:24,211 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-06-27 21:53:24,294 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-27 21:53:24,330 INFO o.s.b.StartupInfoLogger [main] Started NewsServiceApplication in 19.264 seconds (process running for 21.105)
+2023-06-27 21:53:43,132 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-27 21:53:43,133 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-06-27 21:53:43,136 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 2 ms
+2023-06-27 21:53:43,369 WARN o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [105] milliseconds.
+2023-06-27 21:54:11,989 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-06-27 21:54:12,152 INFO o.s.b.StartupInfoLogger [main] Starting NewsServiceApplication using Java 17.0.4.1 with PID 19500 (D:\Clevertec\news_service\build\classes\java\main started by 37529 in D:\Clevertec\news_service)
+2023-06-27 21:54:12,155 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-06-27 21:54:14,547 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-27 21:54:14,732 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 164 ms. Found 3 JPA repository interfaces.
+2023-06-27 21:54:16,875 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-06-27 21:54:16,906 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-27 21:54:16,908 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2023-06-27 21:54:16,909 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-27 21:54:17,210 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-06-27 21:54:17,211 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 4886 ms
+2023-06-27 21:54:17,679 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-06-27 21:54:18,158 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@10dfa7ef
+2023-06-27 21:54:18,163 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-06-27 21:54:18,705 INFO l.l.c.JavaLogger [main] Set default schema name to public
+2023-06-27 21:54:18,968 INFO l.l.c.JavaLogger [main] Reading from public.databasechangelog
+2023-06-27 21:54:19,001 INFO l.l.c.JavaLogger [main] Changelog query completed.
+2023-06-27 21:54:19,366 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-27 21:54:19,583 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-27 21:54:19,600 INFO o.h.c.Environment [main] HHH000406: Using bytecode reflection optimizer
+2023-06-27 21:54:20,132 INFO o.h.b.i.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
+2023-06-27 21:54:20,548 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-27 21:54:20,690 INFO o.h.e.j.d.i.DialectFactoryImpl [main] HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@5d6b5d3d
+2023-06-27 21:54:21,457 INFO o.h.b.i.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
+2023-06-27 21:54:23,761 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-27 21:54:23,769 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-27 21:54:23,803 INFO r.c.n.c.CacheConfigImpl [main] Cache properties initializing: CacheConfigImpl(algorithm=LFU, capacity=5)
+2023-06-27 21:54:25,678 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-27 21:54:26,836 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@280cb0b4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@108b2321, org.springframework.security.web.context.SecurityContextHolderFilter@6e21b6f8, org.springframework.security.web.header.HeaderWriterFilter@13198b8e, org.springframework.security.web.authentication.logout.LogoutFilter@672e4658, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6019ce4b, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6ed2aa8a, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7f2c36de, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@58052571, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5e3a577a, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@52b7a3e1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@61a369cf, org.springframework.security.web.access.ExceptionTranslationFilter@2c6ed95a, org.springframework.security.web.access.intercept.AuthorizationFilter@72259917]
+2023-06-27 21:54:27,107 INFO r.c.e.c.HandlerProperties [main] Handler properties initializing: HandlerProperties(enabled=true)
+2023-06-27 21:54:27,988 INFO r.c.e.c.HandlerAutoConfiguration [main] HandlerAutoConfiguration initialized
+2023-06-27 21:54:27,990 INFO r.c.l.c.LoggingAutoConfiguration [main] LoggingAutoConfiguration initialized
+2023-06-27 21:54:27,995 INFO r.c.l.c.LoggingProperties [main] Logging properties initializing: LoggingProperties(enabled=true)
+2023-06-27 21:54:28,045 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-06-27 21:54:28,133 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-27 21:54:28,178 INFO o.s.b.StartupInfoLogger [main] Started NewsServiceApplication in 17.767 seconds (process running for 19.473)
+2023-06-27 21:54:34,371 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-27 21:54:34,371 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-06-27 21:54:34,374 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2023-06-27 21:54:49,748 WARN o.a.j.l.DirectJDKLog [http-nio-8080-exec-9] Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [116] milliseconds.
+2023-06-27 21:55:21,324 INFO r.c.l.a.a.LoggingAspect [http-nio-8080-exec-5] Controller request: Method - getAllNews accepted parameters: [Page request [number: 0, size 20, sort: UNSORTED]]
+2023-06-27 21:55:21,328 INFO r.c.l.a.a.LoggingAspect [http-nio-8080-exec-5] Class NewsProxy: method getAll accepted parameters - [Page request [number: 0, size 20, sort: UNSORTED]]
+2023-06-27 21:55:21,352 INFO r.c.l.a.a.LoggingAspect [http-nio-8080-exec-5] Class NewsServiceImpl: method getAll accepted parameters - [Page request [number: 0, size 20, sort: UNSORTED]]
+2023-06-27 21:55:21,935 INFO r.c.l.a.a.LoggingAspect [http-nio-8080-exec-5] Class NewsServiceImpl getAll object - [Page request [number: 0, size 20, sort: UNSORTED]]
+2023-06-27 21:55:21,936 INFO r.c.l.a.a.LoggingAspect [http-nio-8080-exec-5] Class NewsServiceImpl: method - getAll returned parameters - Page 1 of 1 containing ru.clevertec.news.entity.News instances
+2023-06-27 21:55:21,942 INFO r.c.l.a.a.LoggingAspect [http-nio-8080-exec-5] Class NewsProxy getAll object - [Page request [number: 0, size 20, sort: UNSORTED]]
+2023-06-27 21:55:21,943 INFO r.c.l.a.a.LoggingAspect [http-nio-8080-exec-5] Class NewsProxy: method - getAll returned parameters - Page 1 of 1 containing ru.clevertec.news.entity.News instances
+2023-06-27 21:55:21,954 INFO r.c.l.a.a.LoggingAspect [http-nio-8080-exec-5] Controller response: Method - getAllNews return parameters: <302 FOUND Found,Page 1 of 1 containing ru.clevertec.news.entity.News instances,[]>
+2023-06-27 21:55:22,314 INFO r.c.l.a.a.LoggingAspect [http-nio-8080-exec-7] Controller request: Method - getAllNews accepted parameters: [Page request [number: 0, size 20, sort: UNSORTED]]
+2023-06-27 21:55:22,315 INFO r.c.l.a.a.LoggingAspect [http-nio-8080-exec-7] Class NewsProxy: method getAll accepted parameters - [Page request [number: 0, size 20, sort: UNSORTED]]
+2023-06-27 21:55:22,317 INFO r.c.l.a.a.LoggingAspect [http-nio-8080-exec-7] Class NewsServiceImpl: method getAll accepted parameters - [Page request [number: 0, size 20, sort: UNSORTED]]
+2023-06-27 21:55:22,410 INFO r.c.l.a.a.LoggingAspect [http-nio-8080-exec-7] Class NewsServiceImpl getAll object - [Page request [number: 0, size 20, sort: UNSORTED]]
+2023-06-27 21:55:22,411 INFO r.c.l.a.a.LoggingAspect [http-nio-8080-exec-7] Class NewsServiceImpl: method - getAll returned parameters - Page 1 of 1 containing ru.clevertec.news.entity.News instances
+2023-06-27 21:55:22,414 INFO r.c.l.a.a.LoggingAspect [http-nio-8080-exec-7] Class NewsProxy getAll object - [Page request [number: 0, size 20, sort: UNSORTED]]
+2023-06-27 21:55:22,415 INFO r.c.l.a.a.LoggingAspect [http-nio-8080-exec-7] Class NewsProxy: method - getAll returned parameters - Page 1 of 1 containing ru.clevertec.news.entity.News instances
+2023-06-27 21:55:22,416 INFO r.c.l.a.a.LoggingAspect [http-nio-8080-exec-7] Controller response: Method - getAllNews return parameters: <302 FOUND Found,Page 1 of 1 containing ru.clevertec.news.entity.News instances,[]>

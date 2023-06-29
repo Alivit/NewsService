@@ -14,7 +14,7 @@ public interface CommentService {
 
     public Comment update(@Valid Comment comment);
 
-    public Comment deleteById(@Positive Long id);
+    public Comment delete(Comment comment);
 
     public Comment getById(@Positive Long id);
 

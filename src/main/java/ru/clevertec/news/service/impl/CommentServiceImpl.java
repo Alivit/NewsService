@@ -13,7 +13,7 @@ import ru.clevertec.news.dao.CommentRepository;
 import ru.clevertec.news.entity.Comment;
 import ru.clevertec.exception_handler.exception.NotFoundException;
 import ru.clevertec.exception_handler.exception.ServerErrorException;
-import ru.clevertec.news.mapper.Mapper;
+import ru.clevertec.news.util.Mapper;
 import ru.clevertec.news.service.CommentService;
 
 import java.util.Map;
@@ -61,12 +61,12 @@ public class CommentServiceImpl implements CommentService {
 
     @Override
     @Transactional
-    public Comment deleteById(Long id) {
+    public Comment delete(Comment comment) {
         try {
-            Comment comment = getById(id);
-            commentRepository.delete(comment);
+            Comment deletedComment = getById(comment.getId());
+            commentRepository.delete(deletedComment);
 
-            return comment;
+            return deletedComment;
         }catch (Exception e){
             throw new ServerErrorException("Error with Delete comment: " + e);
         }

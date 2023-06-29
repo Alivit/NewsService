@@ -14,7 +14,7 @@ public interface NewsService {
 
     public News update(@Valid News news);
 
-    public News deleteById(@Positive Long id);
+    public News delete(News news);
 
     public News getById(@Positive Long id);
 

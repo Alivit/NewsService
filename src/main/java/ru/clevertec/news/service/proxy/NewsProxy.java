@@ -8,11 +8,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import ru.clevertec.logging.aop.annotation.Logging;
 import ru.clevertec.news.caches.CacheProvider;
-import ru.clevertec.news.caches.LFU;
-import ru.clevertec.news.caches.LRU;
 import ru.clevertec.news.config.CacheConfig;
-import ru.clevertec.news.config.CacheConfigImpl;
-import ru.clevertec.news.entity.Comment;
 import ru.clevertec.news.entity.News;
 import ru.clevertec.news.service.NewsService;
 
@@ -59,8 +55,8 @@ public class NewsProxy implements NewsService {
     }
 
     @Override
-    public News deleteById(Long id) {
-        News response = service.deleteById(id);
+    public News delete(News news) {
+        News response = service.delete(news);
 
         if (cache.containsValue(response)) {
             cache.delete(response.getId());
