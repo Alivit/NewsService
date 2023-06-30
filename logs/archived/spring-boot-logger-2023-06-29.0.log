@@ -1,0 +1,758 @@
+2023-06-29 01:40:52,381 WARN c.z.h.p.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h25s416ms132µs200ns).
+2023-06-29 13:37:17,737 WARN c.z.h.p.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11h56m27s661ms732µs500ns).
+2023-06-29 15:41:03,172 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-06-29 15:41:03,374 INFO o.s.b.StartupInfoLogger [main] Starting NewsServiceApplication using Java 17.0.4.1 with PID 26148 (D:\Clevertec\news_service\build\classes\java\main started by 37529 in D:\Clevertec\news_service)
+2023-06-29 15:41:03,386 INFO o.s.b.SpringApplication [main] The following 1 profile is active: "dev"
+2023-06-29 15:41:05,968 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-29 15:41:06,131 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 132 ms. Found 3 JPA repository interfaces.
+2023-06-29 15:41:06,677 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=556ebde1-e287-329d-a4b9-4d534c8a5dbf
+2023-06-29 15:41:08,681 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-06-29 15:41:08,711 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-29 15:41:08,715 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2023-06-29 15:41:08,716 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-29 15:41:09,173 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-06-29 15:41:09,174 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 5611 ms
+2023-06-29 15:41:09,717 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-06-29 15:41:10,198 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@70f85235
+2023-06-29 15:41:10,203 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-06-29 15:41:10,517 INFO l.l.c.JavaLogger [main] Set default schema name to public
+2023-06-29 15:41:10,800 INFO l.l.c.JavaLogger [main] Changelog query completed.
+2023-06-29 15:41:10,808 INFO l.l.c.JavaLogger [main] Changelog query completed.
+2023-06-29 15:41:10,816 INFO l.l.c.JavaLogger [main] Changelog query completed.
+2023-06-29 15:41:10,821 INFO l.l.c.JavaLogger [main] Changelog query completed.
+2023-06-29 15:41:10,830 INFO l.l.c.JavaLogger [main] Changelog query completed.
+2023-06-29 15:41:10,831 INFO l.l.c.JavaLogger [main] Successfully acquired change log lock
+2023-06-29 15:41:10,864 INFO l.l.c.JavaLogger [main] Creating database history table with name: public.databasechangelog
+2023-06-29 15:41:10,874 INFO l.l.c.JavaLogger [main] Changelog query completed.
+2023-06-29 15:41:10,879 INFO l.l.c.JavaLogger [main] Reading from public.databasechangelog
+2023-06-29 15:41:10,886 INFO l.l.c.JavaLogger [main] Changelog query completed.
+2023-06-29 15:41:10,888 INFO l.l.c.JavaLogger [main] Changelog query completed.
+2023-06-29 15:41:11,020 INFO l.l.c.JavaLogger [main] Custom SQL executed
+2023-06-29 15:41:11,022 INFO l.l.c.JavaLogger [main] ChangeSet db.changelog/changeset/ddl/create-tables.sql::raw::includeAll ran successfully in 83ms
+2023-06-29 15:41:11,029 INFO l.l.c.JavaLogger [main] Changelog query completed.
+2023-06-29 15:41:11,034 INFO l.l.c.JavaLogger [main] Changelog query completed.
+2023-06-29 15:41:11,098 INFO l.l.c.JavaLogger [main] Custom SQL executed
+2023-06-29 15:41:11,102 INFO l.l.c.JavaLogger [main] ChangeSet db.changelog/changeset/dml/insert-info.sql::raw::includeAll ran successfully in 63ms
+2023-06-29 15:41:11,107 INFO l.l.c.JavaLogger [main] Changelog query completed.
+2023-06-29 15:41:11,110 INFO l.l.c.JavaLogger [main] Update command completed successfully.
+2023-06-29 15:41:11,116 INFO l.l.c.JavaLogger [main] Changelog query completed.
+2023-06-29 15:41:11,118 INFO l.l.c.JavaLogger [main] Successfully released change log lock
+2023-06-29 15:41:11,340 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-29 15:41:11,548 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-29 15:41:11,557 INFO o.h.c.Environment [main] HHH000406: Using bytecode reflection optimizer
+2023-06-29 15:41:11,993 INFO o.h.b.i.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
+2023-06-29 15:41:12,432 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-29 15:41:12,641 INFO o.h.e.j.d.i.DialectFactoryImpl [main] HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@58486deb
+2023-06-29 15:41:13,361 INFO o.h.b.i.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
+2023-06-29 15:41:15,909 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-29 15:41:15,924 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-29 15:41:15,975 INFO r.c.n.c.CacheConfigImpl [main] Cache properties initializing: CacheConfigImpl(algorithm=LFU, capacity=5)
+2023-06-29 15:41:17,955 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-29 15:41:19,457 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5118c7fb, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@792b0cad, org.springframework.security.web.context.SecurityContextHolderFilter@2c9616bb, org.springframework.security.web.header.HeaderWriterFilter@43ef1243, org.springframework.security.web.authentication.logout.LogoutFilter@52d0a5fe, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@65f270e7, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7d4bb16b, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@8be84bf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2154de40, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@18bd3135, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@eaa901a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1d5e0621, org.springframework.security.web.access.ExceptionTranslationFilter@f9d7d3f, org.springframework.security.web.access.intercept.AuthorizationFilter@1a034bbc]
+2023-06-29 15:41:19,796 INFO r.c.e.c.HandlerProperties [main] Handler properties initializing: HandlerProperties(enabled=true)
+2023-06-29 15:41:21,568 INFO r.c.e.c.HandlerAutoConfiguration [main] HandlerAutoConfiguration initialized
+2023-06-29 15:41:21,572 INFO r.c.l.c.LoggingAutoConfiguration [main] LoggingAutoConfiguration initialized
+2023-06-29 15:41:21,577 INFO r.c.l.c.LoggingProperties [main] Logging properties initializing: LoggingProperties(enabled=true)
+2023-06-29 15:41:21,680 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-06-29 15:41:21,746 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-29 15:41:22,450 INFO o.s.b.StartupInfoLogger [main] Started NewsServiceApplication in 21.525 seconds (process running for 23.505)
+2023-06-29 17:18:23,907 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-06-29 17:18:24,103 INFO o.s.b.StartupInfoLogger [main] Starting NewsServiceApplication using Java 17.0.4.1 with PID 444 (D:\Clevertec\news_service\build\classes\java\main started by 37529 in D:\Clevertec\news_service)
+2023-06-29 17:18:24,108 INFO o.s.b.SpringApplication [main] The following 1 profile is active: "prod"
+2023-06-29 17:18:24,306 INFO o.s.b.l.DeferredLog [main] Fetching config from server at : http://spring-cloud-service:9090
+2023-06-29 17:18:24,307 INFO o.s.b.l.DeferredLog [main] Exception on Url - http://spring-cloud-service:9090:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://spring-cloud-service:9090/news-configuration/prod": spring-cloud-service. Will be trying the next url if available
+2023-06-29 17:18:24,308 WARN o.s.b.l.DeferredLog [main] Could not locate PropertySource ([ConfigServerConfigDataResource@4e7095ac uris = array<String>['http://spring-cloud-service:9090'], optional = true, profiles = list['prod']]): I/O error on GET request for "http://spring-cloud-service:9090/news-configuration/prod": spring-cloud-service
+2023-06-29 17:18:27,504 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-29 17:18:27,731 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 200 ms. Found 3 JPA repository interfaces.
+2023-06-29 17:18:28,399 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=b866e160-214c-34d7-bfaf-7e319a129aa3
+2023-06-29 17:18:29,922 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-06-29 17:18:29,955 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-29 17:18:29,959 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2023-06-29 17:18:29,961 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-29 17:18:30,275 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-06-29 17:18:30,277 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 5961 ms
+2023-06-29 17:18:30,836 WARN o.s.c.s.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Failed to instantiate [liquibase.integration.spring.SpringLiquibase]: Factory method 'liquibase' threw exception with message: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2023-06-29 17:18:30,843 INFO o.a.j.l.DirectJDKLog [main] Stopping service [Tomcat]
+2023-06-29 17:18:30,907 INFO o.s.b.a.l.ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-06-29 17:18:30,957 ERROR o.s.b.d.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (the profiles prod are currently active).
+
+2023-06-29 17:20:53,100 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-06-29 17:20:53,297 INFO o.s.b.StartupInfoLogger [main] Starting NewsServiceApplication using Java 17.0.4.1 with PID 11220 (D:\Clevertec\news_service\build\classes\java\main started by 37529 in D:\Clevertec\news_service)
+2023-06-29 17:20:53,302 INFO o.s.b.SpringApplication [main] The following 1 profile is active: "prod"
+2023-06-29 17:20:53,499 INFO o.s.b.l.DeferredLog [main] Fetching config from server at : http://spring-cloud-service.com
+2023-06-29 17:20:53,500 INFO o.s.b.l.DeferredLog [main] Exception on Url - http://spring-cloud-service.com:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://spring-cloud-service.com/news-configuration/prod": spring-cloud-service.com. Will be trying the next url if available
+2023-06-29 17:20:53,501 WARN o.s.b.l.DeferredLog [main] Could not locate PropertySource ([ConfigServerConfigDataResource@b273a59 uris = array<String>['http://spring-cloud-service.com'], optional = true, profiles = list['prod']]): I/O error on GET request for "http://spring-cloud-service.com/news-configuration/prod": spring-cloud-service.com
+2023-06-29 17:20:56,806 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-29 17:20:57,007 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 168 ms. Found 3 JPA repository interfaces.
+2023-06-29 17:20:57,606 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=b866e160-214c-34d7-bfaf-7e319a129aa3
+2023-06-29 17:20:59,127 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-06-29 17:20:59,161 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-29 17:20:59,164 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2023-06-29 17:20:59,166 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-29 17:20:59,503 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-06-29 17:20:59,504 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 5997 ms
+2023-06-29 17:21:00,084 WARN o.s.c.s.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Failed to instantiate [liquibase.integration.spring.SpringLiquibase]: Factory method 'liquibase' threw exception with message: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2023-06-29 17:21:00,092 INFO o.a.j.l.DirectJDKLog [main] Stopping service [Tomcat]
+2023-06-29 17:21:00,179 INFO o.s.b.a.l.ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-06-29 17:21:00,254 ERROR o.s.b.d.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (the profiles prod are currently active).
+
+2023-06-29 17:25:19,540 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-06-29 17:25:19,695 INFO o.s.b.StartupInfoLogger [main] Starting NewsServiceApplication using Java 17.0.4.1 with PID 31212 (D:\Clevertec\news_service\build\classes\java\main started by 37529 in D:\Clevertec\news_service)
+2023-06-29 17:25:19,705 INFO o.s.b.SpringApplication [main] The following 1 profile is active: "prod"
+2023-06-29 17:25:19,888 INFO o.s.b.l.DeferredLog [main] Fetching config from server at : http://spring-cloud-service
+2023-06-29 17:25:19,889 INFO o.s.b.l.DeferredLog [main] Exception on Url - http://spring-cloud-service:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://spring-cloud-service/news-configuration/prod": spring-cloud-service. Will be trying the next url if available
+2023-06-29 17:25:19,890 WARN o.s.b.l.DeferredLog [main] Could not locate PropertySource ([ConfigServerConfigDataResource@b273a59 uris = array<String>['http://spring-cloud-service'], optional = true, profiles = list['prod']]): I/O error on GET request for "http://spring-cloud-service/news-configuration/prod": spring-cloud-service
+2023-06-29 17:25:23,121 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-29 17:25:23,332 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 186 ms. Found 3 JPA repository interfaces.
+2023-06-29 17:25:23,955 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=b866e160-214c-34d7-bfaf-7e319a129aa3
+2023-06-29 17:25:25,453 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-06-29 17:25:25,479 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-29 17:25:25,481 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2023-06-29 17:25:25,482 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-29 17:25:25,818 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-06-29 17:25:25,818 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 5922 ms
+2023-06-29 17:25:26,401 WARN o.s.c.s.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Failed to instantiate [liquibase.integration.spring.SpringLiquibase]: Factory method 'liquibase' threw exception with message: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2023-06-29 17:25:26,412 INFO o.a.j.l.DirectJDKLog [main] Stopping service [Tomcat]
+2023-06-29 17:25:26,490 INFO o.s.b.a.l.ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-06-29 17:25:26,544 ERROR o.s.b.d.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (the profiles prod are currently active).
+
+2023-06-29 17:28:20,839 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-06-29 17:28:21,076 INFO o.s.b.StartupInfoLogger [main] Starting NewsServiceApplication using Java 17.0.4.1 with PID 34796 (D:\Clevertec\news_service\build\classes\java\main started by 37529 in D:\Clevertec\news_service)
+2023-06-29 17:28:21,084 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-06-29 17:28:21,230 INFO o.s.b.l.DeferredLog [main] Fetching config from server at : http://spring-cloud-service:9090
+2023-06-29 17:28:21,231 INFO o.s.b.l.DeferredLog [main] Exception on Url - http://spring-cloud-service:9090:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://spring-cloud-service:9090/news-configuration/default": spring-cloud-service. Will be trying the next url if available
+2023-06-29 17:28:21,233 WARN o.s.b.l.DeferredLog [main] Could not locate PropertySource ([ConfigServerConfigDataResource@2237bada uris = array<String>['http://spring-cloud-service:9090'], optional = true, profiles = list['default']]): I/O error on GET request for "http://spring-cloud-service:9090/news-configuration/default": spring-cloud-service
+2023-06-29 17:28:24,183 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-29 17:28:24,402 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 188 ms. Found 3 JPA repository interfaces.
+2023-06-29 17:28:25,063 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=b866e160-214c-34d7-bfaf-7e319a129aa3
+2023-06-29 17:28:26,476 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-06-29 17:28:26,506 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-29 17:28:26,509 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2023-06-29 17:28:26,510 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-29 17:28:26,862 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-06-29 17:28:26,863 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 5624 ms
+2023-06-29 17:28:27,397 WARN o.s.c.s.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Failed to instantiate [liquibase.integration.spring.SpringLiquibase]: Factory method 'liquibase' threw exception with message: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2023-06-29 17:28:27,412 INFO o.a.j.l.DirectJDKLog [main] Stopping service [Tomcat]
+2023-06-29 17:28:27,537 INFO o.s.b.a.l.ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-06-29 17:28:27,616 ERROR o.s.b.d.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2023-06-29 17:34:37,494 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-06-29 17:34:37,635 INFO o.s.b.StartupInfoLogger [main] Starting NewsServiceApplication using Java 17.0.4.1 with PID 13744 (D:\Clevertec\news_service\build\classes\java\main started by 37529 in D:\Clevertec\news_service)
+2023-06-29 17:34:37,639 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-06-29 17:34:37,865 INFO o.s.b.l.DeferredLog [main] Fetching config from server at : http://spring-cloud-service:9090
+2023-06-29 17:34:37,865 INFO o.s.b.l.DeferredLog [main] Exception on Url - http://spring-cloud-service:9090:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://spring-cloud-service:9090/news-configuration/default": spring-cloud-service. Will be trying the next url if available
+2023-06-29 17:34:37,866 WARN o.s.b.l.DeferredLog [main] Could not locate PropertySource ([ConfigServerConfigDataResource@29b732a2 uris = array<String>['http://spring-cloud-service:9090'], optional = true, profiles = list['default']]): I/O error on GET request for "http://spring-cloud-service:9090/news-configuration/default": spring-cloud-service
+2023-06-29 17:34:41,103 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-29 17:34:41,282 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 156 ms. Found 3 JPA repository interfaces.
+2023-06-29 17:34:41,821 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=b866e160-214c-34d7-bfaf-7e319a129aa3
+2023-06-29 17:34:43,147 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-06-29 17:34:43,175 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-29 17:34:43,178 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2023-06-29 17:34:43,179 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-29 17:34:43,549 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-06-29 17:34:43,557 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 5679 ms
+2023-06-29 17:34:44,132 WARN o.s.c.s.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Failed to instantiate [liquibase.integration.spring.SpringLiquibase]: Factory method 'liquibase' threw exception with message: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2023-06-29 17:34:44,140 INFO o.a.j.l.DirectJDKLog [main] Stopping service [Tomcat]
+2023-06-29 17:34:44,205 INFO o.s.b.a.l.ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-06-29 17:34:44,255 ERROR o.s.b.d.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2023-06-29 17:44:25,450 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-06-29 17:44:25,578 INFO o.s.b.StartupInfoLogger [main] Starting NewsServiceApplication using Java 17.0.4.1 with PID 13692 (D:\Clevertec\news_service\build\classes\java\main started by 37529 in D:\Clevertec\news_service)
+2023-06-29 17:44:25,581 INFO o.s.b.SpringApplication [main] The following 1 profile is active: "prod"
+2023-06-29 17:44:25,756 INFO o.s.b.l.DeferredLog [main] Fetching config from server at : http://spring-cloud-service:9090
+2023-06-29 17:44:25,758 INFO o.s.b.l.DeferredLog [main] Exception on Url - http://spring-cloud-service:9090:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://spring-cloud-service:9090/news-configuration/prod": spring-cloud-service. Will be trying the next url if available
+2023-06-29 17:44:25,758 WARN o.s.b.l.DeferredLog [main] Could not locate PropertySource ([ConfigServerConfigDataResource@4e7095ac uris = array<String>['http://spring-cloud-service:9090'], optional = true, profiles = list['prod']]): I/O error on GET request for "http://spring-cloud-service:9090/news-configuration/prod": spring-cloud-service
+2023-06-29 17:44:29,192 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-29 17:44:29,357 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 140 ms. Found 3 JPA repository interfaces.
+2023-06-29 17:44:29,791 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=b866e160-214c-34d7-bfaf-7e319a129aa3
+2023-06-29 17:44:31,243 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-06-29 17:44:31,279 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-29 17:44:31,281 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2023-06-29 17:44:31,282 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-29 17:44:31,678 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-06-29 17:44:31,679 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 5915 ms
+2023-06-29 17:44:32,211 WARN o.s.c.s.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Failed to instantiate [liquibase.integration.spring.SpringLiquibase]: Factory method 'liquibase' threw exception with message: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2023-06-29 17:44:32,220 INFO o.a.j.l.DirectJDKLog [main] Stopping service [Tomcat]
+2023-06-29 17:44:32,291 INFO o.s.b.a.l.ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-06-29 17:44:32,352 ERROR o.s.b.d.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (the profiles prod are currently active).
+
+2023-06-29 17:49:01,126 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-06-29 17:49:01,296 INFO o.s.b.StartupInfoLogger [main] Starting NewsServiceApplication using Java 17.0.4.1 with PID 32372 (D:\Clevertec\news_service\build\classes\java\main started by 37529 in D:\Clevertec\news_service)
+2023-06-29 17:49:01,300 INFO o.s.b.SpringApplication [main] The following 1 profile is active: "prod"
+2023-06-29 17:49:01,518 INFO o.s.b.l.DeferredLog [main] Fetching config from server at : http://localhost:8888
+2023-06-29 17:49:01,519 INFO o.s.b.l.DeferredLog [main] Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/news-configuration/prod": Connection refused: no further information. Will be trying the next url if available
+2023-06-29 17:49:01,520 WARN o.s.b.l.DeferredLog [main] Could not locate PropertySource ([ConfigServerConfigDataResource@1b70203f uris = array<String>['http://localhost:8888'], optional = true, profiles = list['prod']]): I/O error on GET request for "http://localhost:8888/news-configuration/prod": Connection refused: no further information
+2023-06-29 17:49:05,025 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-29 17:49:05,202 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 146 ms. Found 3 JPA repository interfaces.
+2023-06-29 17:49:05,815 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=b866e160-214c-34d7-bfaf-7e319a129aa3
+2023-06-29 17:49:07,342 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-06-29 17:49:07,387 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-29 17:49:07,391 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2023-06-29 17:49:07,393 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-29 17:49:07,763 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-06-29 17:49:07,764 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 6238 ms
+2023-06-29 17:49:08,334 WARN o.s.c.s.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Failed to instantiate [liquibase.integration.spring.SpringLiquibase]: Factory method 'liquibase' threw exception with message: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2023-06-29 17:49:08,342 INFO o.a.j.l.DirectJDKLog [main] Stopping service [Tomcat]
+2023-06-29 17:49:08,418 INFO o.s.b.a.l.ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-06-29 17:49:08,476 ERROR o.s.b.d.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (the profiles prod are currently active).
+
+2023-06-29 17:50:04,296 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-06-29 17:50:04,444 INFO o.s.b.StartupInfoLogger [main] Starting NewsServiceApplication using Java 17.0.4.1 with PID 848 (D:\Clevertec\news_service\build\classes\java\main started by 37529 in D:\Clevertec\news_service)
+2023-06-29 17:50:04,446 INFO o.s.b.SpringApplication [main] The following 1 profile is active: "prod"
+2023-06-29 17:50:04,619 INFO o.s.b.l.DeferredLog [main] Fetching config from server at : http://spring-cloud-service:8888
+2023-06-29 17:50:04,620 INFO o.s.b.l.DeferredLog [main] Exception on Url - http://spring-cloud-service:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://spring-cloud-service:8888/news-configuration/prod": spring-cloud-service. Will be trying the next url if available
+2023-06-29 17:50:04,621 WARN o.s.b.l.DeferredLog [main] Could not locate PropertySource ([ConfigServerConfigDataResource@251ebf23 uris = array<String>['http://spring-cloud-service:8888'], optional = true, profiles = list['prod']]): I/O error on GET request for "http://spring-cloud-service:8888/news-configuration/prod": spring-cloud-service
+2023-06-29 17:50:07,557 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-29 17:50:07,756 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 179 ms. Found 3 JPA repository interfaces.
+2023-06-29 17:50:08,410 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=b866e160-214c-34d7-bfaf-7e319a129aa3
+2023-06-29 17:50:09,802 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-06-29 17:50:09,828 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-29 17:50:09,829 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2023-06-29 17:50:09,830 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-29 17:50:10,161 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-06-29 17:50:10,162 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 5533 ms
+2023-06-29 17:50:10,676 WARN o.s.c.s.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Failed to instantiate [liquibase.integration.spring.SpringLiquibase]: Factory method 'liquibase' threw exception with message: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2023-06-29 17:50:10,682 INFO o.a.j.l.DirectJDKLog [main] Stopping service [Tomcat]
+2023-06-29 17:50:10,751 INFO o.s.b.a.l.ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-06-29 17:50:10,796 ERROR o.s.b.d.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (the profiles prod are currently active).
+
+2023-06-29 17:51:18,818 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-06-29 17:51:18,984 INFO o.s.b.StartupInfoLogger [main] Starting NewsServiceApplication using Java 17.0.4.1 with PID 11724 (D:\Clevertec\news_service\build\classes\java\main started by 37529 in D:\Clevertec\news_service)
+2023-06-29 17:51:18,987 INFO o.s.b.SpringApplication [main] The following 1 profile is active: "prod"
+2023-06-29 17:51:19,179 INFO o.s.b.l.DeferredLog [main] Fetching config from server at : http://spring-cloud-service:8888
+2023-06-29 17:51:19,179 INFO o.s.b.l.DeferredLog [main] Exception on Url - http://spring-cloud-service:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://spring-cloud-service:8888/news-configuration/prod": spring-cloud-service. Will be trying the next url if available
+2023-06-29 17:51:19,180 WARN o.s.b.l.DeferredLog [main] Could not locate PropertySource ([ConfigServerConfigDataResource@74518890 uris = array<String>['http://spring-cloud-service:8888'], optional = true, profiles = list['prod']]): I/O error on GET request for "http://spring-cloud-service:8888/news-configuration/prod": spring-cloud-service
+2023-06-29 17:51:22,580 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-29 17:51:22,746 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 141 ms. Found 3 JPA repository interfaces.
+2023-06-29 17:51:23,455 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=b866e160-214c-34d7-bfaf-7e319a129aa3
+2023-06-29 17:51:24,827 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-06-29 17:51:24,851 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-29 17:51:24,853 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2023-06-29 17:51:24,855 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-29 17:51:25,295 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-06-29 17:51:25,299 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 6108 ms
+2023-06-29 17:51:25,866 WARN o.s.c.s.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Failed to instantiate [liquibase.integration.spring.SpringLiquibase]: Factory method 'liquibase' threw exception with message: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2023-06-29 17:51:25,875 INFO o.a.j.l.DirectJDKLog [main] Stopping service [Tomcat]
+2023-06-29 17:51:25,960 INFO o.s.b.a.l.ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-06-29 17:51:26,033 ERROR o.s.b.d.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (the profiles prod are currently active).
+
+2023-06-29 17:54:52,772 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-06-29 17:54:52,956 INFO o.s.b.StartupInfoLogger [main] Starting NewsServiceApplication using Java 17.0.4.1 with PID 24220 (D:\Clevertec\news_service\build\classes\java\main started by 37529 in D:\Clevertec\news_service)
+2023-06-29 17:54:52,966 INFO o.s.b.SpringApplication [main] The following 1 profile is active: "prod"
+2023-06-29 17:54:53,162 INFO o.s.b.l.DeferredLog [main] Fetching config from server at : http://localhost:8888
+2023-06-29 17:54:53,163 INFO o.s.b.l.DeferredLog [main] Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/spring-cloud-service/prod": Connection refused: no further information. Will be trying the next url if available
+2023-06-29 17:54:53,163 WARN o.s.b.l.DeferredLog [main] Could not locate PropertySource ([ConfigServerConfigDataResource@1162410a uris = array<String>['http://localhost:8888'], optional = true, profiles = list['prod']]): I/O error on GET request for "http://localhost:8888/spring-cloud-service/prod": Connection refused: no further information
+2023-06-29 17:54:56,242 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-29 17:54:56,438 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 167 ms. Found 3 JPA repository interfaces.
+2023-06-29 17:54:57,173 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=b866e160-214c-34d7-bfaf-7e319a129aa3
+2023-06-29 17:54:58,769 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-06-29 17:54:58,798 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-29 17:54:58,801 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2023-06-29 17:54:58,802 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-29 17:54:59,104 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-06-29 17:54:59,105 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 5937 ms
+2023-06-29 17:54:59,704 WARN o.s.c.s.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Failed to instantiate [liquibase.integration.spring.SpringLiquibase]: Factory method 'liquibase' threw exception with message: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2023-06-29 17:54:59,715 INFO o.a.j.l.DirectJDKLog [main] Stopping service [Tomcat]
+2023-06-29 17:54:59,796 INFO o.s.b.a.l.ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-06-29 17:54:59,853 ERROR o.s.b.d.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (the profiles prod are currently active).
+
+2023-06-29 18:05:50,860 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-06-29 18:05:51,001 INFO o.s.b.StartupInfoLogger [main] Starting NewsServiceApplication using Java 17.0.4.1 with PID 3148 (D:\Clevertec\news_service\build\classes\java\main started by 37529 in D:\Clevertec\news_service)
+2023-06-29 18:05:51,005 INFO o.s.b.SpringApplication [main] The following 1 profile is active: "prod"
+2023-06-29 18:05:51,225 INFO o.s.b.l.DeferredLog [main] Fetching config from server at : http://localhost:8888
+2023-06-29 18:05:51,227 INFO o.s.b.l.DeferredLog [main] Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/config-server/prod": Connection refused: no further information. Will be trying the next url if available
+2023-06-29 18:05:51,228 WARN o.s.b.l.DeferredLog [main] Could not locate PropertySource ([ConfigServerConfigDataResource@5b43e173 uris = array<String>['http://localhost:8888'], optional = true, profiles = list['prod']]): I/O error on GET request for "http://localhost:8888/config-server/prod": Connection refused: no further information
+2023-06-29 18:05:54,651 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-29 18:05:54,867 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 189 ms. Found 3 JPA repository interfaces.
+2023-06-29 18:05:55,430 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=b866e160-214c-34d7-bfaf-7e319a129aa3
+2023-06-29 18:05:56,786 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-06-29 18:05:56,811 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-29 18:05:56,814 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2023-06-29 18:05:56,815 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-29 18:05:57,230 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-06-29 18:05:57,233 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 5997 ms
+2023-06-29 18:05:57,705 WARN o.s.c.s.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Failed to instantiate [liquibase.integration.spring.SpringLiquibase]: Factory method 'liquibase' threw exception with message: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2023-06-29 18:05:57,713 INFO o.a.j.l.DirectJDKLog [main] Stopping service [Tomcat]
+2023-06-29 18:05:57,787 INFO o.s.b.a.l.ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-06-29 18:05:57,841 ERROR o.s.b.d.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (the profiles prod are currently active).
+
+2023-06-29 18:08:05,934 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-06-29 18:08:06,095 INFO o.s.b.StartupInfoLogger [main] Starting NewsServiceApplication using Java 17.0.4.1 with PID 26280 (D:\Clevertec\news_service\build\classes\java\main started by 37529 in D:\Clevertec\news_service)
+2023-06-29 18:08:06,098 INFO o.s.b.SpringApplication [main] The following 1 profile is active: "prod"
+2023-06-29 18:08:06,269 WARN o.s.b.l.DeferredLog [main] Could not locate PropertySource ([ConfigServerConfigDataResource@3d6300e8 uris = array<String>['http://localhost:8888:config-server'], optional = true, profiles = list['prod']]): Invalid URL: http://localhost:8888:config-server
+2023-06-29 18:08:09,649 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-29 18:08:09,853 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 177 ms. Found 3 JPA repository interfaces.
+2023-06-29 18:08:10,648 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=b866e160-214c-34d7-bfaf-7e319a129aa3
+2023-06-29 18:08:12,038 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-06-29 18:08:12,062 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-29 18:08:12,065 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2023-06-29 18:08:12,066 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-29 18:08:12,409 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-06-29 18:08:12,410 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 6135 ms
+2023-06-29 18:08:13,070 WARN o.s.c.s.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Failed to instantiate [liquibase.integration.spring.SpringLiquibase]: Factory method 'liquibase' threw exception with message: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2023-06-29 18:08:13,079 INFO o.a.j.l.DirectJDKLog [main] Stopping service [Tomcat]
+2023-06-29 18:08:13,181 INFO o.s.b.a.l.ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-06-29 18:08:13,264 ERROR o.s.b.d.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (the profiles prod are currently active).
+
+2023-06-29 18:09:08,345 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-06-29 18:09:08,565 INFO o.s.b.StartupInfoLogger [main] Starting NewsServiceApplication using Java 17.0.4.1 with PID 28708 (D:\Clevertec\news_service\build\classes\java\main started by 37529 in D:\Clevertec\news_service)
+2023-06-29 18:09:08,569 INFO o.s.b.SpringApplication [main] The following 1 profile is active: "prod"
+2023-06-29 18:09:08,716 WARN o.s.b.l.DeferredLog [main] Could not locate PropertySource ([ConfigServerConfigDataResource@3d6300e8 uris = array<String>['http://localhost:8888:config-server'], optional = true, profiles = list['prod']]): Invalid URL: http://localhost:8888:config-server
+2023-06-29 18:09:11,662 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-29 18:09:11,877 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 191 ms. Found 3 JPA repository interfaces.
+2023-06-29 18:09:12,442 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=b866e160-214c-34d7-bfaf-7e319a129aa3
+2023-06-29 18:09:13,782 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-06-29 18:09:13,799 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-29 18:09:13,800 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2023-06-29 18:09:13,801 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-29 18:09:14,086 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-06-29 18:09:14,088 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 5366 ms
+2023-06-29 18:09:14,700 WARN o.s.c.s.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Failed to instantiate [liquibase.integration.spring.SpringLiquibase]: Factory method 'liquibase' threw exception with message: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2023-06-29 18:09:14,705 INFO o.a.j.l.DirectJDKLog [main] Stopping service [Tomcat]
+2023-06-29 18:09:14,788 INFO o.s.b.a.l.ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-06-29 18:09:14,855 ERROR o.s.b.d.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (the profiles prod are currently active).
+
+2023-06-29 18:39:48,876 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-06-29 18:39:49,047 INFO o.s.b.StartupInfoLogger [main] Starting NewsServiceApplication using Java 17.0.4.1 with PID 23676 (D:\Clevertec\news_service\build\classes\java\main started by 37529 in D:\Clevertec\news_service)
+2023-06-29 18:39:49,050 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-06-29 18:39:49,259 INFO o.s.b.l.DeferredLog [main] Fetching config from server at : http://localhost:8888
+2023-06-29 18:39:49,259 INFO o.s.b.l.DeferredLog [main] Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/news-configuration/default": Connection refused: no further information. Will be trying the next url if available
+2023-06-29 18:39:49,260 WARN o.s.b.l.DeferredLog [main] Could not locate PropertySource ([ConfigServerConfigDataResource@9fecdf1 uris = array<String>['http://localhost:8888'], optional = true, profiles = list['default']]): I/O error on GET request for "http://localhost:8888/news-configuration/default": Connection refused: no further information
+2023-06-29 18:39:52,682 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-29 18:39:52,849 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 139 ms. Found 3 JPA repository interfaces.
+2023-06-29 18:39:53,475 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=b866e160-214c-34d7-bfaf-7e319a129aa3
+2023-06-29 18:39:54,768 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-06-29 18:39:54,801 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-29 18:39:54,804 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2023-06-29 18:39:54,806 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-29 18:39:55,240 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-06-29 18:39:55,246 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 5975 ms
+2023-06-29 18:39:55,793 WARN o.s.c.s.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Failed to instantiate [liquibase.integration.spring.SpringLiquibase]: Factory method 'liquibase' threw exception with message: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2023-06-29 18:39:55,805 INFO o.a.j.l.DirectJDKLog [main] Stopping service [Tomcat]
+2023-06-29 18:39:55,914 INFO o.s.b.a.l.ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-06-29 18:39:56,001 ERROR o.s.b.d.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2023-06-29 18:40:55,659 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-06-29 18:40:55,813 INFO o.s.b.StartupInfoLogger [main] Starting NewsServiceApplication using Java 17.0.4.1 with PID 25340 (D:\Clevertec\news_service\build\classes\java\main started by 37529 in D:\Clevertec\news_service)
+2023-06-29 18:40:55,816 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-06-29 18:40:56,019 INFO o.s.b.l.DeferredLog [main] Fetching config from server at : http://spring-cloud-service:8888
+2023-06-29 18:40:56,020 INFO o.s.b.l.DeferredLog [main] Exception on Url - http://spring-cloud-service:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://spring-cloud-service:8888/news-configuration/default": spring-cloud-service. Will be trying the next url if available
+2023-06-29 18:40:56,021 WARN o.s.b.l.DeferredLog [main] Could not locate PropertySource ([ConfigServerConfigDataResource@6105f8a3 uris = array<String>['http://spring-cloud-service:8888'], optional = true, profiles = list['default']]): I/O error on GET request for "http://spring-cloud-service:8888/news-configuration/default": spring-cloud-service
+2023-06-29 18:40:59,342 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-29 18:40:59,552 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 184 ms. Found 3 JPA repository interfaces.
+2023-06-29 18:41:00,148 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=b866e160-214c-34d7-bfaf-7e319a129aa3
+2023-06-29 18:41:01,601 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-06-29 18:41:01,628 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-29 18:41:01,630 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2023-06-29 18:41:01,631 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-29 18:41:01,969 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-06-29 18:41:01,970 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 5943 ms
+2023-06-29 18:41:02,523 WARN o.s.c.s.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Failed to instantiate [liquibase.integration.spring.SpringLiquibase]: Factory method 'liquibase' threw exception with message: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2023-06-29 18:41:02,532 INFO o.a.j.l.DirectJDKLog [main] Stopping service [Tomcat]
+2023-06-29 18:41:02,614 INFO o.s.b.a.l.ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-06-29 18:41:02,666 ERROR o.s.b.d.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2023-06-29 18:42:18,553 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-06-29 18:42:18,710 INFO o.s.b.StartupInfoLogger [main] Starting NewsServiceApplication using Java 17.0.4.1 with PID 7840 (D:\Clevertec\news_service\build\classes\java\main started by 37529 in D:\Clevertec\news_service)
+2023-06-29 18:42:18,717 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-06-29 18:42:18,899 INFO o.s.b.l.DeferredLog [main] Fetching config from server at : http://localhost:8888
+2023-06-29 18:42:18,901 INFO o.s.b.l.DeferredLog [main] Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/spring-cloud-service/default": Connection refused: no further information. Will be trying the next url if available
+2023-06-29 18:42:18,902 WARN o.s.b.l.DeferredLog [main] Could not locate PropertySource ([ConfigServerConfigDataResource@5710768a uris = array<String>['http://localhost:8888'], optional = true, profiles = list['default']]): I/O error on GET request for "http://localhost:8888/spring-cloud-service/default": Connection refused: no further information
+2023-06-29 18:42:22,204 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-29 18:42:22,435 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 202 ms. Found 3 JPA repository interfaces.
+2023-06-29 18:42:22,912 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=b866e160-214c-34d7-bfaf-7e319a129aa3
+2023-06-29 18:42:24,464 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-06-29 18:42:24,497 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-29 18:42:24,499 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2023-06-29 18:42:24,501 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-29 18:42:24,794 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-06-29 18:42:24,795 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 5888 ms
+2023-06-29 18:42:25,321 WARN o.s.c.s.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Failed to instantiate [liquibase.integration.spring.SpringLiquibase]: Factory method 'liquibase' threw exception with message: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2023-06-29 18:42:25,327 INFO o.a.j.l.DirectJDKLog [main] Stopping service [Tomcat]
+2023-06-29 18:42:25,396 INFO o.s.b.a.l.ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-06-29 18:42:25,447 ERROR o.s.b.d.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2023-06-29 18:47:47,375 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-06-29 18:47:47,626 INFO o.s.b.StartupInfoLogger [main] Starting NewsServiceApplication using Java 17.0.4.1 with PID 11220 (D:\Clevertec\news_service\build\classes\java\main started by 37529 in D:\Clevertec\news_service)
+2023-06-29 18:47:47,632 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-06-29 18:47:47,795 INFO o.s.b.l.DeferredLog [main] Fetching config from server at : http://localhost:8888
+2023-06-29 18:47:47,796 INFO o.s.b.l.DeferredLog [main] Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/spring-cloud-service/default": Connection refused: no further information. Will be trying the next url if available
+2023-06-29 18:47:47,797 WARN o.s.b.l.DeferredLog [main] Could not locate PropertySource ([ConfigServerConfigDataResource@5710768a uris = array<String>['http://localhost:8888'], optional = true, profiles = list['default']]): I/O error on GET request for "http://localhost:8888/spring-cloud-service/default": Connection refused: no further information
+2023-06-29 18:47:51,123 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-29 18:47:51,307 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 149 ms. Found 3 JPA repository interfaces.
+2023-06-29 18:47:51,935 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=b866e160-214c-34d7-bfaf-7e319a129aa3
+2023-06-29 18:47:53,433 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-06-29 18:47:53,468 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-29 18:47:53,471 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2023-06-29 18:47:53,473 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-29 18:47:53,759 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-06-29 18:47:53,759 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 5957 ms
+2023-06-29 18:47:54,197 WARN o.s.c.s.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Failed to instantiate [liquibase.integration.spring.SpringLiquibase]: Factory method 'liquibase' threw exception with message: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2023-06-29 18:47:54,204 INFO o.a.j.l.DirectJDKLog [main] Stopping service [Tomcat]
+2023-06-29 18:47:54,252 INFO o.s.b.a.l.ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-06-29 18:47:54,339 ERROR o.s.b.d.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2023-06-29 18:50:44,784 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-06-29 18:50:44,942 INFO o.s.b.StartupInfoLogger [main] Starting NewsServiceApplication using Java 17.0.4.1 with PID 33384 (D:\Clevertec\news_service\build\classes\java\main started by 37529 in D:\Clevertec\news_service)
+2023-06-29 18:50:44,944 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-06-29 18:50:45,162 INFO o.s.b.l.DeferredLog [main] Fetching config from server at : http://localhost:8888
+2023-06-29 18:50:45,163 INFO o.s.b.l.DeferredLog [main] Located environment: name=news-configuration, profiles=[default], label=null, version=7532e1005ca83c773c7681f2cdc4c967579dd3fe, state=null
+2023-06-29 18:50:48,347 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-29 18:50:48,563 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 181 ms. Found 3 JPA repository interfaces.
+2023-06-29 18:50:49,250 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=9fbe627b-20f9-3038-9894-28d5d5a1bbaf
+2023-06-29 18:50:51,258 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-06-29 18:50:51,281 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-29 18:50:51,282 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2023-06-29 18:50:51,283 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-29 18:50:51,587 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-06-29 18:50:51,595 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 6419 ms
+2023-06-29 18:50:52,741 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-06-29 18:50:53,297 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@61c58320
+2023-06-29 18:50:53,301 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-06-29 18:50:53,711 INFO l.l.c.JavaLogger [main] Set default schema name to public
+2023-06-29 18:50:53,927 INFO l.l.c.JavaLogger [main] Reading from public.databasechangelog
+2023-06-29 18:50:53,949 INFO l.l.c.JavaLogger [main] Changelog query completed.
+2023-06-29 18:50:54,169 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-29 18:50:54,376 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-29 18:50:54,381 INFO o.h.c.Environment [main] HHH000406: Using bytecode reflection optimizer
+2023-06-29 18:50:54,793 INFO o.h.b.i.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
+2023-06-29 18:50:55,155 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-29 18:50:55,242 INFO o.h.e.j.d.i.DialectFactoryImpl [main] HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@4be5b9b1
+2023-06-29 18:50:56,001 INFO o.h.b.i.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
+2023-06-29 18:50:58,415 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-29 18:50:58,428 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-29 18:50:58,485 INFO r.c.n.c.CacheConfigImpl [main] Cache properties initializing: CacheConfigImpl(algorithm=LFU, capacity=5)
+2023-06-29 18:51:00,304 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-29 18:51:02,172 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-29 18:51:02,475 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@558bff39, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7e01d838, org.springframework.security.web.context.SecurityContextHolderFilter@15c25cb6, org.springframework.security.web.header.HeaderWriterFilter@6752d7fc, org.springframework.security.web.authentication.logout.LogoutFilter@28023029, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@46791608, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5c71329f, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2e3334d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@62a9c857, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@644ae4ff, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@2e2d7dc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@66a5f996, org.springframework.security.web.access.ExceptionTranslationFilter@71d94ab, org.springframework.security.web.access.intercept.AuthorizationFilter@4caeeab6]
+2023-06-29 18:51:02,682 INFO r.c.e.c.HandlerProperties [main] Handler properties initializing: HandlerProperties(enabled=true)
+2023-06-29 18:51:04,626 INFO r.c.e.c.HandlerAutoConfiguration [main] HandlerAutoConfiguration initialized
+2023-06-29 18:51:04,631 INFO r.c.l.c.LoggingAutoConfiguration [main] LoggingAutoConfiguration initialized
+2023-06-29 18:51:04,637 INFO r.c.l.c.LoggingProperties [main] Logging properties initializing: LoggingProperties(enabled=true)
+2023-06-29 18:51:04,812 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-06-29 18:51:04,897 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-29 18:51:05,456 INFO o.s.b.StartupInfoLogger [main] Started NewsServiceApplication in 29.927 seconds (process running for 31.459)
+2023-06-29 21:54:49,154 WARN c.z.h.p.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h25s629ms370µs400ns).

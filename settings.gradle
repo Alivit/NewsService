@@ -1,4 +1,6 @@
 rootProject.name = 'news'
 include 'logging-starter'
 include 'exception-handler-starter'
+include 'users-microservice'
+include 'spring-cloud-service'
 
