@@ -2,7 +2,7 @@ version: '4.0'
 services:
   database-postgres:
     container_name: postgres
-    image: postgres:14.6
+    image: postgres:15
     ports:
       - "5433:5433"
     environment:
