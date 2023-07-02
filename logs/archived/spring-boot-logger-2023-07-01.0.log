@@ -1,0 +1,70 @@
+2023-07-01 11:37:23,127 WARN c.z.h.p.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13h13m52s711ms417µs800ns).
+2023-07-01 15:04:02,853 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-07-01 15:04:02,956 INFO o.s.b.StartupInfoLogger [Test worker] Starting NewsServiceIT using Java 17.0.4.1 with PID 26896 (started by 37529 in D:\Clevertec\news_service)
+2023-07-01 15:04:02,961 INFO o.s.b.SpringApplication [Test worker] The following 1 profile is active: "dev"
+2023-07-01 15:04:06,899 INFO o.s.d.r.c.RepositoryConfigurationDelegate [Test worker] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-01 15:04:07,053 INFO o.s.d.r.c.RepositoryConfigurationDelegate [Test worker] Finished Spring Data repository scanning in 132 ms. Found 3 JPA repository interfaces.
+2023-07-01 15:04:07,622 INFO o.s.c.c.s.GenericScope [Test worker] BeanFactory id=132a63b8-4c38-30a7-987d-15ba5497efba
+2023-07-01 15:04:09,067 INFO c.z.h.HikariDataSource [Test worker] HikariPool-1 - Starting...
+2023-07-01 15:04:09,705 INFO c.z.h.p.HikariPool [Test worker] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@450d10cb
+2023-07-01 15:04:09,713 INFO c.z.h.HikariDataSource [Test worker] HikariPool-1 - Start completed.
+2023-07-01 15:04:10,313 INFO l.l.c.JavaLogger [Test worker] Set default schema name to public
+2023-07-01 15:04:10,602 INFO l.l.c.JavaLogger [Test worker] Reading from public.databasechangelog
+2023-07-01 15:04:10,635 INFO l.l.c.JavaLogger [Test worker] Changelog query completed.
+2023-07-01 15:04:11,084 INFO o.h.j.i.u.LogHelper [Test worker] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-01 15:04:11,324 INFO o.h.Version [Test worker] HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-07-01 15:04:11,331 INFO o.h.c.Environment [Test worker] HHH000406: Using bytecode reflection optimizer
+2023-07-01 15:04:11,758 INFO o.h.b.i.BytecodeProviderInitiator [Test worker] HHH000021: Bytecode provider name : bytebuddy
+2023-07-01 15:04:12,162 INFO o.s.o.j.p.SpringPersistenceUnitInfo [Test worker] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-01 15:04:12,276 INFO o.h.e.j.d.i.DialectFactoryImpl [Test worker] HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@69356aca
+2023-07-01 15:04:12,757 INFO o.h.b.i.BytecodeProviderInitiator [Test worker] HHH000021: Bytecode provider name : bytebuddy
+2023-07-01 15:04:13,997 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [Test worker] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-01 15:04:14,002 INFO o.s.o.j.AbstractEntityManagerFactoryBean [Test worker] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-01 15:04:14,025 INFO r.c.n.c.CacheConfig [Test worker] Cache properties initializing: CacheConfig(algorithm=LFU, capacity=5)
+2023-07-01 15:04:15,335 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [Test worker] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-01 15:04:16,509 INFO o.s.b.a.e.w.EndpointLinksResolver [Test worker] Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-01 15:04:16,659 INFO o.s.s.w.DefaultSecurityFilterChain [Test worker] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6c633590, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@c5dc3db, org.springframework.security.web.context.SecurityContextHolderFilter@3199c2c1, org.springframework.security.web.header.HeaderWriterFilter@120bb5b5, org.springframework.security.web.authentication.logout.LogoutFilter@4872d04d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@63f9c2cd, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2cef4321, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2910c3ae, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@17f8c75e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2d7bfb13, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@988eae9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2182ebc7, org.springframework.security.web.access.ExceptionTranslationFilter@76527a00, org.springframework.security.web.access.intercept.AuthorizationFilter@47e6004c]
+2023-07-01 15:04:17,247 INFO r.c.e.c.HandlerProperties [Test worker] Handler properties initializing: HandlerProperties(enabled=true)
+2023-07-01 15:04:19,083 INFO r.c.e.c.HandlerAutoConfiguration [Test worker] HandlerAutoConfiguration initialized
+2023-07-01 15:04:19,090 INFO r.c.l.c.LoggingAutoConfiguration [Test worker] LoggingAutoConfiguration initialized
+2023-07-01 15:04:19,105 INFO r.c.l.c.LoggingProperties [Test worker] Logging properties initializing: LoggingProperties(enabled=true)
+2023-07-01 15:04:19,353 INFO o.s.b.StartupInfoLogger [Test worker] Started NewsServiceIT in 18.551 seconds (process running for 23.257)
+2023-07-01 15:04:21,290 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-01 15:04:21,296 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-07-01 15:04:21,317 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-07-01 15:09:58,819 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-07-01 15:09:58,911 INFO o.s.b.StartupInfoLogger [Test worker] Starting NewsServiceIT using Java 17.0.4.1 with PID 29156 (started by 37529 in D:\Clevertec\news_service)
+2023-07-01 15:09:58,916 INFO o.s.b.SpringApplication [Test worker] The following 1 profile is active: "dev"
+2023-07-01 15:10:02,439 INFO o.s.d.r.c.RepositoryConfigurationDelegate [Test worker] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-01 15:10:02,619 INFO o.s.d.r.c.RepositoryConfigurationDelegate [Test worker] Finished Spring Data repository scanning in 159 ms. Found 3 JPA repository interfaces.
+2023-07-01 15:10:03,236 INFO o.s.c.c.s.GenericScope [Test worker] BeanFactory id=132a63b8-4c38-30a7-987d-15ba5497efba
+2023-07-01 15:10:04,935 INFO c.z.h.HikariDataSource [Test worker] HikariPool-1 - Starting...
+2023-07-01 15:10:05,486 INFO c.z.h.p.HikariPool [Test worker] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3dad535f
+2023-07-01 15:10:05,496 INFO c.z.h.HikariDataSource [Test worker] HikariPool-1 - Start completed.
+2023-07-01 15:10:06,118 INFO l.l.c.JavaLogger [Test worker] Set default schema name to public
+2023-07-01 15:10:06,396 INFO l.l.c.JavaLogger [Test worker] Reading from public.databasechangelog
+2023-07-01 15:10:06,424 INFO l.l.c.JavaLogger [Test worker] Changelog query completed.
+2023-07-01 15:10:06,804 INFO o.h.j.i.u.LogHelper [Test worker] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-01 15:10:06,972 INFO o.h.Version [Test worker] HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-07-01 15:10:06,978 INFO o.h.c.Environment [Test worker] HHH000406: Using bytecode reflection optimizer
+2023-07-01 15:10:07,446 INFO o.h.b.i.BytecodeProviderInitiator [Test worker] HHH000021: Bytecode provider name : bytebuddy
+2023-07-01 15:10:07,994 INFO o.s.o.j.p.SpringPersistenceUnitInfo [Test worker] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-01 15:10:08,171 INFO o.h.e.j.d.i.DialectFactoryImpl [Test worker] HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@2d1f3639
+2023-07-01 15:10:08,789 INFO o.h.b.i.BytecodeProviderInitiator [Test worker] HHH000021: Bytecode provider name : bytebuddy
+2023-07-01 15:10:11,311 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [Test worker] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-01 15:10:11,325 INFO o.s.o.j.AbstractEntityManagerFactoryBean [Test worker] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-01 15:10:11,396 INFO r.c.n.c.CacheConfig [Test worker] Cache properties initializing: CacheConfig(algorithm=LFU, capacity=5)
+2023-07-01 15:10:13,490 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [Test worker] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-01 15:10:15,297 INFO o.s.b.a.e.w.EndpointLinksResolver [Test worker] Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-01 15:10:15,921 INFO o.s.s.w.DefaultSecurityFilterChain [Test worker] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2d4eba14, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@358caf3a, org.springframework.security.web.context.SecurityContextHolderFilter@476d5f2e, org.springframework.security.web.header.HeaderWriterFilter@5862a07b, org.springframework.security.web.authentication.logout.LogoutFilter@34ceefb5, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@66ab765c, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@20dab85c, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2fc72df3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@42908ad5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@290964bd, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@36821a1b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@72288b38, org.springframework.security.web.access.ExceptionTranslationFilter@7ab5b01a, org.springframework.security.web.access.intercept.AuthorizationFilter@26753687]
+2023-07-01 15:10:16,773 INFO r.c.e.c.HandlerProperties [Test worker] Handler properties initializing: HandlerProperties(enabled=true)
+2023-07-01 15:10:18,716 INFO r.c.e.c.HandlerAutoConfiguration [Test worker] HandlerAutoConfiguration initialized
+2023-07-01 15:10:18,722 INFO r.c.l.c.LoggingAutoConfiguration [Test worker] LoggingAutoConfiguration initialized
+2023-07-01 15:10:18,729 INFO r.c.l.c.LoggingProperties [Test worker] Logging properties initializing: LoggingProperties(enabled=true)
+2023-07-01 15:10:18,987 INFO o.s.b.StartupInfoLogger [Test worker] Started NewsServiceIT in 22.199 seconds (process running for 26.721)
+2023-07-01 15:10:22,090 INFO r.c.l.a.a.LoggingAspect [Test worker] Class NewsServiceImpl: method getById accepted parameters - [1]
+2023-07-01 15:10:22,524 INFO r.c.l.a.a.LoggingAspect [Test worker] Class NewsServiceImpl getById object - [1]
+2023-07-01 15:10:22,525 INFO r.c.l.a.a.LoggingAspect [Test worker] Class NewsServiceImpl: method - getById returned parameters - News(id=1, username=Dreamcatcher7, title=COVID-19 cases surge in major cities, text=As the Delta variant of COVID-19 continues to spread, major cities around the world are seeing a surge in cases. Hospitals are becoming overwhelmed and governments are implementing stricter measures to try and curb the spread of the virus., createDateNews=2022-03-10T16:11:56, updateDateNews=2022-03-10T16:11:56)
+2023-07-01 15:10:22,890 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-01 15:10:22,910 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-07-01 15:10:23,126 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.

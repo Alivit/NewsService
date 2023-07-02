@@ -9,6 +9,10 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import ru.clevertec.exception_handler.handler.ControllerErrorHandler;
 
+/**
+ * The HandlerProperties class for reading properties for config logging.
+ * It provides methods to set up various settings handler exception configurations.
+ */
 @Data
 @Slf4j
 @NoArgsConstructor

@@ -61,4 +61,9 @@ public class Comment {
     @EqualsAndHashCode.Exclude
     @JsonBackReference
     private News news;
+
+    public String toStringForFind(){
+        return id + " " + username + " " + text + " " +
+                createDateComment + " " + updateDateComment;
+    }
 }

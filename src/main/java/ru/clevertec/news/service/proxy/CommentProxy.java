@@ -12,6 +12,12 @@ import ru.clevertec.news.config.CacheConfig;
 import ru.clevertec.news.entity.Comment;
 import ru.clevertec.news.service.CommentService;
 
+import java.util.List;
+
+/**
+ * The CommentProxy class represents the service for comment-related operations.
+ * It provides methods to interact with the cache layer and perform CRUD operations on comments.
+ */
 @Logging
 @Service
 @RequiredArgsConstructor
@@ -72,5 +78,10 @@ public class CommentProxy implements CommentService {
         }
 
         return cache.get(id);
+    }
+
+    @Override
+    public List<Comment> findAllBy(String word) {
+        return service.findAllBy(word);
     }
 }

@@ -4,11 +4,11 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -20,6 +20,7 @@ import ru.clevertec.news.entity.User;
 import ru.clevertec.news.util.Mapper;
 import ru.clevertec.news.service.UserService;
 
+import java.util.List;
 import java.util.Map;
 
 @Logging
@@ -33,6 +34,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
+    @CachePut(value = "user", key = "#result.getId()")
     public User create(User user) {
         try {
             user.setPassword(passwordEncoder.encode(user.getPassword()));
@@ -54,6 +56,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
+    @CachePut(value = "user", key = "#result.getId()")
     public User update(User user) {
         try {
             user.setPassword(passwordEncoder.encode(user.getPassword()));
@@ -68,23 +71,34 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
-    public User deleteById(Long id) {
+    @CacheEvict(value = "user", key = "#result.getId()")
+    public User delete(User user) {
         try {
-            User user = getById(id);
-            repository.delete(user);
+            User deletedUser = getById(user.getId());
+            repository.delete(deletedUser);
 
-            return user;
+            return deletedUser;
         } catch (Exception e){
             throw new ServerErrorException("Error with Delete user: " + e);
         }
     }
 
     @Override
+    @Cacheable(value = "user")
     public User getById(Long id) {
         return repository.findById(id).orElseThrow(() ->
                 new NotFoundException("User with id - " + id + " not found"));
     }
 
+    @Override
+    public List<User> findAllBy(String word) {
+        List<User> user = repository.findAll();
+        if(user.isEmpty()) throw new NotFoundException("News not found");
+
+        return user.stream()
+                .filter(obj -> obj.toStringForFind().contains(word))
+                .toList();
+    }
 
 
     private User updateFieldsNews(User user) throws JsonProcessingException {

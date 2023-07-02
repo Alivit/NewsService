@@ -13,6 +13,10 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: none
+  data:
+    redis:
+      host: redis
+      port: 6379
   liquibase:
     change-log: db.changelog/db.changelog-master.yaml
 # Cache

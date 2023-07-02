@@ -14,8 +14,11 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import ru.clevertec.news.entity.News;
 import ru.clevertec.exception_handler.model.ErrorMessage;
+
+import java.util.List;
 
 @Tag(name = "News", description = "The News API")
 public interface NewsOpenAPI {
@@ -141,6 +144,62 @@ public interface NewsOpenAPI {
             )
     })
     public ResponseEntity<News> getNewsById(@PathVariable Long id);
+
+    @Operation(
+            operationId = "findAllNewsBy",
+            summary = "Method of receiving list of news by the word",
+            parameters = @Parameter(
+                    name = "word",
+                    description = "Enter word here",
+                    example = "New"
+            )
+    )
+    @ApiResponses( value = {
+            @ApiResponse(
+                    responseCode = "302",
+                    description = "Successful response with founded news",
+                    content = @Content(
+                            mediaType = "application/json",
+                            schema = @Schema(implementation = News.class),
+                            examples = @ExampleObject("""
+                                      [{
+                                        "id": 20,
+                                        "title": "New Title",
+                                        "text": "New Text",
+                                        "createDateNews": "2023-06-18T17:34:45.426Z",
+                                        "updateDateNews": "2023-06-18T17:34:45.426Z",
+                                        "comments": [
+                                          {
+                                            "id": 4,
+                                            "username": "Ivan",
+                                            "text": "New Text",
+                                            "createDateComment": "2023-06-18T17:34:45.426Z",
+                                            "updateDateComment": "2023-06-18T17:34:45.426Z",
+                                            "news": "string"
+                                          }
+                                        ]                         
+                                      }]"""
+                            )
+                    )
+            ),
+            @ApiResponse(
+                    responseCode = "404",
+                    description = "The server not found news",
+                    content = @Content(
+                            mediaType = "application/json",
+                            schema = @Schema(implementation = ErrorMessage.class),
+                            examples = @ExampleObject("""
+                                    {
+                                      "status": 404,
+                                      "message": "News with id - 20 not found",
+                                      "time": "2023-06-18T18:47:43.225Z"
+                                    }
+                                    """
+                            )
+                    )
+            )
+    })
+    public ResponseEntity<List<News>> findAllNewsBy(@RequestParam String word);
 
     @Operation(
             operationId = "createNews",

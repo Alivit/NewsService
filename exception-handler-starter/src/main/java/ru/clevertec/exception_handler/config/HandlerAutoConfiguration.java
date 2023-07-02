@@ -9,6 +9,11 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * The HandlerAutoConfiguration class is responsible for configuring
+ * the application and its components.
+ * It provides methods to set up various settings handler exception configurations.
+ */
 @Slf4j
 @Configuration
 @EnableConfigurationProperties(HandlerProperties.class)

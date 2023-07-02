@@ -25,7 +25,6 @@ public class LFU<K, V> implements CacheProvider<K, V> {
     @Override
     public V get(K key) {
         if(!storage.containsKey(key)) {
-            System.out.println("lol");
             return null;
         }
         Long count = counters.get(key); // получения счётчика по ключу

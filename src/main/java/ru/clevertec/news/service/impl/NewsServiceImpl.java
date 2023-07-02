@@ -4,18 +4,22 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import ru.clevertec.exception_handler.exception.NotFoundException;
+import ru.clevertec.exception_handler.exception.ServerErrorException;
 import ru.clevertec.logging.aop.annotation.Logging;
 import ru.clevertec.news.dao.NewsRepository;
 import ru.clevertec.news.entity.News;
-import ru.clevertec.exception_handler.exception.NotFoundException;
-import ru.clevertec.exception_handler.exception.ServerErrorException;
-import ru.clevertec.news.util.Mapper;
 import ru.clevertec.news.service.NewsService;
+import ru.clevertec.news.util.Mapper;
 
+import java.util.List;
 import java.util.Map;
 
 @Logging
@@ -28,6 +32,7 @@ public class NewsServiceImpl implements NewsService {
 
     @Override
     @Transactional
+    @CachePut(value = "news", key = "#result.getId()")
     public News create(News news) {
         try {
             newsRepository.save(news);
@@ -48,6 +53,7 @@ public class NewsServiceImpl implements NewsService {
 
     @Override
     @Transactional
+    @CachePut(value = "news", key = "#result.getId()")
     public News update(News news) {
        try {
            News newsUpdated = updateFieldsNews(news);
@@ -61,6 +67,7 @@ public class NewsServiceImpl implements NewsService {
 
     @Override
     @Transactional
+    @CacheEvict(value = "news", key = "#result.getId()")
     public News delete(News news) {
         try {
             News deletedNews = getById(news.getId());
@@ -73,11 +80,21 @@ public class NewsServiceImpl implements NewsService {
     }
 
     @Override
+    @Cacheable(value = "news")
     public News getById(Long id) {
         return newsRepository.findById(id).orElseThrow(() ->
                 new NotFoundException("News with id - " + id + " not found"));
     }
 
+    @Override
+    public List<News> findAllBy(String word) {
+        List<News> news = newsRepository.findAll();
+        if(news.isEmpty()) throw new NotFoundException("News not found");
+
+        return news.stream()
+                .filter(obj -> obj.toStringForFind().contains(word))
+                .toList();
+    }
 
 
     private News updateFieldsNews(News news) throws JsonProcessingException {

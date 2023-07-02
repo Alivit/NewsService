@@ -1,0 +1,52 @@
+version: '4.0'
+services:
+  database-postgres:
+    container_name: postgres
+    image: postgres:14.6
+    ports:
+      - "5433:5433"
+    environment:
+      - POSTGRES_USERNAME = postgres
+      - POSTGRES_PASSWORD = 241201
+    volumes:
+      - ./infrastructure/db/create_db.sql:/docker-entrypoint-initdb.d/create_db.sql
+    restart: unless-stopped
+    networks:
+      - backend
+
+  spring-cloud-config:
+    container_name: spring-cloud-service
+    image: spring-cloud-service
+    build:
+      dockerfile: spring-cloud-service/Dockerfile
+    ports:
+      - "8888:8888"
+    networks:
+      - backend
+
+  redis:
+    container_name: redis
+    image: redis
+    ports:
+      - "6379:6379"
+    networks:
+    - backend
+  news-service:
+    container_name: news-service
+    image: news-service
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - database-postgres
+      - redis
+    links:
+      - database-postgres
+      - redis
+    networks:
+      - backend
+
+networks:
+  backend:
+    external: true

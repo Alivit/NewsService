@@ -5,32 +5,38 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JSR310Module;
-import org.yaml.snakeyaml.Yaml;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.util.Locale;
 import java.util.Map;
 
-public class Mapper {
+/**
+ * The Mapper class is responsible for mapping data between different objects or data structures.
+ * It provides methods to convert data from one type to another.
+ */
+public class Mapper{
 
-    public static final String ApplicationYamlFileName = "src/main/resources/application.yml";
-
-    public static Map<String, Map<String,Object>> getProperties(){
-        try {
-            return new Yaml().load(new FileReader(ApplicationYamlFileName));
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        }
-    }
+    /**
+     * Methods to convert data from object to map.
+     * @param obj The obj containing the details of the object.
+     * @return Map with converting object
+     */
     public static Map<String, Object> toMap(Object obj) throws JsonProcessingException {
         return newMapper().readValue(toString(obj), new TypeReference<>() {});
     }
 
+    /**
+     * Methods to convert data from object to json.
+     * @param obj The obj containing the details of the object.
+     * @return JSON with converting object
+     */
     public static String toString(Object obj) throws JsonProcessingException {
         return newMapper().writeValueAsString(obj);
     }
 
+    /**
+     * Methods for configuration mapper.
+     * @return mapper with config properties
+     */
     private static ObjectMapper newMapper() {
         final ObjectMapper mapper = new ObjectMapper();
         mapper.setSerializationInclusion(JsonInclude.Include.NON_DEFAULT);
@@ -38,4 +44,5 @@ public class Mapper {
         mapper.registerModule(new JSR310Module());
         return mapper;
     }
+
 }

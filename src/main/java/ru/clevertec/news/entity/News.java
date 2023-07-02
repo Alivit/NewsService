@@ -69,4 +69,9 @@ public class News {
     @EqualsAndHashCode.Exclude
     @JsonManagedReference
     private List<Comment> comments = new ArrayList<>();
+
+    public String toStringForFind(){
+        return id + " " + username + " " + title + " " +
+                text + " " + createDateNews + " " + updateDateNews;
+    }
 }

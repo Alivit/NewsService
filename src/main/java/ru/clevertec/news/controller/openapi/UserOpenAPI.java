@@ -14,8 +14,11 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import ru.clevertec.exception_handler.model.ErrorMessage;
 import ru.clevertec.news.entity.User;
+
+import java.util.List;
 
 @Tag(name = "User", description = "The User API")
 public interface UserOpenAPI {
@@ -46,23 +49,16 @@ public interface UserOpenAPI {
                             mediaType = "application/json",
                             schema = @Schema(implementation = User.class),
                             examples = @ExampleObject("""
-                                      {
-                                        "id": 20,
-                                        "title": "New Title",
-                                        "text": "New Text",
-                                        "createDateUser": "2023-06-18T17:34:45.426Z",
-                                        "updateDateUser": "2023-06-18T17:34:45.426Z",
-                                        "comments": [
-                                          {
-                                            "id": 4,
-                                            "username": "Ivan",
-                                            "text": "New Text",
-                                            "createDateComment": "2023-06-18T17:34:45.426Z",
-                                            "updateDateComment": "2023-06-18T17:34:45.426Z",
-                                            "user": "string"
-                                          }
-                                        ]                         
-                                      }"""
+                                    {
+                                      "id": 2,
+                                      "username": "Ilia",
+                                      "password": "8888",
+                                      "active": "true",
+                                      "dateOfRegistry": "2023-06-18T17:34:45.426Z",
+                                      "roles": [
+                                         "ADMIN"
+                                      ]
+                                    }"""
                             )
                     )
             ),
@@ -83,7 +79,7 @@ public interface UserOpenAPI {
                     )
             )
     })
-    public ResponseEntity<Page<User>> getAllUser(Pageable pageable);
+    public ResponseEntity<Page<User>> getAllUsers(Pageable pageable);
 
     @Operation(
             operationId = "getUserById",
@@ -104,22 +100,15 @@ public interface UserOpenAPI {
                             schema = @Schema(implementation = User.class),
                             examples = @ExampleObject("""
                                       {
-                                        "id": 20,
-                                        "title": "New Title",
-                                        "text": "New Text",
-                                        "createDateUser": "2023-06-18T17:34:45.426Z",
-                                        "updateDateUser": "2023-06-18T17:34:45.426Z",
-                                        "comments": [
-                                          {
-                                            "id": 4,
-                                            "username": "Ivan",
-                                            "text": "New Text",
-                                            "createDateComment": "2023-06-18T17:34:45.426Z",
-                                            "updateDateComment": "2023-06-18T17:34:45.426Z",
-                                            "user": "string"
-                                          }
-                                        ]                         
-                                      }"""
+                                      "id": 2,
+                                      "username": "Ilia",
+                                      "password": "8888",
+                                      "active": "true",
+                                      "dateOfRegistry": "2023-06-18T17:34:45.426Z",
+                                      "roles": [
+                                         "ADMIN"
+                                      ]
+                                    }"""
                             )
                     )
             ),
@@ -143,6 +132,55 @@ public interface UserOpenAPI {
     public ResponseEntity<User> getUserById(@PathVariable Long id);
 
     @Operation(
+            operationId = "findAllUserBy",
+            summary = "Method of receiving list of users by the word",
+            parameters = @Parameter(
+                    name = "word",
+                    description = "Enter word here",
+                    example = "Ilia"
+            )
+    )
+    @ApiResponses( value = {
+            @ApiResponse(
+                    responseCode = "302",
+                    description = "Successful response with founded user",
+                    content = @Content(
+                            mediaType = "application/json",
+                            schema = @Schema(implementation = User.class),
+                            examples = @ExampleObject("""
+                                      [{
+                                      "id": 2,
+                                      "username": "Ilia",
+                                      "password": "8888",
+                                      "active": "true",
+                                      "dateOfRegistry": "2023-06-18T17:34:45.426Z",
+                                      "roles": [
+                                         "ADMIN"
+                                      ]
+                                    }]"""
+                            )
+                    )
+            ),
+            @ApiResponse(
+                    responseCode = "404",
+                    description = "The server not found user",
+                    content = @Content(
+                            mediaType = "application/json",
+                            schema = @Schema(implementation = ErrorMessage.class),
+                            examples = @ExampleObject("""
+                                    {
+                                      "status": 404,
+                                      "message": "User with id - 20 not found",
+                                      "time": "2023-06-18T18:47:43.225Z"
+                                    }
+                                    """
+                            )
+                    )
+            )
+    })
+    public ResponseEntity<List<User>> findAllUserBy(@RequestParam String word);
+
+    @Operation(
             operationId = "createUser",
             summary = "Method of user creation",
             requestBody = @RequestBody(
@@ -151,22 +189,15 @@ public interface UserOpenAPI {
                             schema = @Schema(implementation = User.class),
                             examples = @ExampleObject("""
                                       {
-                                        "id": 20,
-                                        "title": "New Title",
-                                        "text": "New Text",
-                                        "createDateUser": "2023-06-18T17:34:45.426Z",
-                                        "updateDateUser": "2023-06-18T17:34:45.426Z",
-                                        "comments": [
-                                          {
-                                            "id": 4,
-                                            "username": "Ivan",
-                                            "text": "New Text",
-                                            "createDateComment": "2023-06-18T17:34:45.426Z",
-                                            "updateDateComment": "2023-06-18T17:34:45.426Z",
-                                            "user": "string"
-                                          }
-                                        ]                         
-                                      }"""
+                                      "id": 2,
+                                      "username": "Ilia",
+                                      "password": "8888",
+                                      "active": "true",
+                                      "dateOfRegistry": "2023-06-18T17:34:45.426Z",
+                                      "roles": [
+                                         "ADMIN"
+                                      ]
+                                    }"""
                             )
                     )
             )
@@ -180,22 +211,15 @@ public interface UserOpenAPI {
                             schema = @Schema(implementation = User.class),
                             examples = @ExampleObject("""
                                       {
-                                        "id": 20,
-                                        "title": "New Title",
-                                        "text": "New Text",
-                                        "createDateUser": "2023-06-18T17:34:45.426Z",
-                                        "updateDateUser": "2023-06-18T17:34:45.426Z",
-                                        "comments": [
-                                          {
-                                            "id": 4,
-                                            "username": "Ivan",
-                                            "text": "New Text",
-                                            "createDateComment": "2023-06-18T17:34:45.426Z",
-                                            "updateDateComment": "2023-06-18T17:34:45.426Z",
-                                            "user": "string"
-                                          }
-                                        ]                         
-                                      }"""
+                                      "id": 2,
+                                      "username": "Ilia",
+                                      "password": "8888",
+                                      "active": "true",
+                                      "dateOfRegistry": "2023-06-18T17:34:45.426Z",
+                                      "roles": [
+                                         "ADMIN"
+                                      ]
+                                    }"""
                             )
                     )
             ),
@@ -227,22 +251,15 @@ public interface UserOpenAPI {
                             schema = @Schema(implementation = User.class),
                             examples = @ExampleObject("""
                                       {
-                                        "id": 20,
-                                        "title": "New Title",
-                                        "text": "New Text",
-                                        "createDateUser": "2023-06-18T17:34:45.426Z",
-                                        "updateDateUser": "2023-06-18T17:34:45.426Z",
-                                        "comments": [
-                                          {
-                                            "id": 4,
-                                            "username": "Ivan",
-                                            "text": "New Text",
-                                            "createDateComment": "2023-06-18T17:34:45.426Z",
-                                            "updateDateComment": "2023-06-18T17:34:45.426Z",
-                                            "user": "string"
-                                          }
-                                        ]                         
-                                      }"""
+                                      "id": 2,
+                                      "username": "Ilia",
+                                      "password": "8888",
+                                      "active": "true",
+                                      "dateOfRegistry": "2023-06-18T17:34:45.426Z",
+                                      "roles": [
+                                         "ADMIN"
+                                      ]
+                                    }"""
                             )
                     )
             )
@@ -256,22 +273,15 @@ public interface UserOpenAPI {
                             schema = @Schema(implementation = User.class),
                             examples = @ExampleObject("""
                                       {
-                                        "id": 20,
-                                        "title": "New Title",
-                                        "text": "New Text",
-                                        "createDateUser": "2023-06-18T17:34:45.426Z",
-                                        "updateDateUser": "2023-06-18T17:34:45.426Z",
-                                        "comments": [
-                                          {
-                                            "id": 4,
-                                            "username": "Ivan",
-                                            "text": "New Text",
-                                            "createDateComment": "2023-06-18T17:34:45.426Z",
-                                            "updateDateComment": "2023-06-18T17:34:45.426Z",
-                                            "user": "string"
-                                          }
-                                        ]                         
-                                      }"""
+                                      "id": 2,
+                                      "username": "Ilia",
+                                      "password": "8888",
+                                      "active": "true",
+                                      "dateOfRegistry": "2023-06-18T17:34:45.426Z",
+                                      "roles": [
+                                         "ADMIN"
+                                      ]
+                                    }"""
                             )
                     )
             ),
@@ -313,11 +323,23 @@ public interface UserOpenAPI {
     @Operation(
             operationId = "deleteUser",
             summary = "Method of deleting user by the id",
-            parameters = @Parameter(
-                    name = "id",
-                    required = true,
-                    description = "Enter id here",
-                    example = "20"
+            requestBody = @RequestBody(
+                    description = "RequestBody for User",
+                    content = @Content(
+                            schema = @Schema(implementation = User.class),
+                            examples = @ExampleObject("""
+                                      {
+                                      "id": 2,
+                                      "username": "Ilia",
+                                      "password": "8888",
+                                      "active": "true",
+                                      "dateOfRegistry": "2023-06-18T17:34:45.426Z",
+                                      "roles": [
+                                         "ADMIN"
+                                      ]
+                                    }"""
+                            )
+                    )
             )
     )
     @ApiResponses( value = {
@@ -329,22 +351,15 @@ public interface UserOpenAPI {
                             schema = @Schema(implementation = User.class),
                             examples = @ExampleObject("""
                                       {
-                                        "id": 20,
-                                        "title": "New Title",
-                                        "text": "New Text",
-                                        "createDateUser": "2023-06-18T17:34:45.426Z",
-                                        "updateDateUser": "2023-06-18T17:34:45.426Z",
-                                        "comments": [
-                                          {
-                                            "id": 4,
-                                            "username": "Ivan",
-                                            "text": "New Text",
-                                            "createDateComment": "2023-06-18T17:34:45.426Z",
-                                            "updateDateComment": "2023-06-18T17:34:45.426Z",
-                                            "user": "string"
-                                          }
-                                        ]                         
-                                      }"""
+                                      "id": 2,
+                                      "username": "Ilia",
+                                      "password": "8888",
+                                      "active": "true",
+                                      "dateOfRegistry": "2023-06-18T17:34:45.426Z",
+                                      "roles": [
+                                         "ADMIN"
+                                      ]
+                                    }"""
                             )
                     )
             ),
@@ -365,5 +380,5 @@ public interface UserOpenAPI {
                     )
             )
     })
-    public ResponseEntity<User> deleteUser(@PathVariable Long id);
+    public ResponseEntity<User> deleteUser(@RequestBody User user);
 }

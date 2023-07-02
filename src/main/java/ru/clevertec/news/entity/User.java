@@ -81,6 +81,11 @@ public class User implements UserDetails {
         return roles;
     }
 
+    public String toStringForFind(){
+        return id + " " + username + " " + active + " " +
+                dateOfRegistry + " " + roles;
+    }
+
     @Override
     public String getPassword() {
         return password;

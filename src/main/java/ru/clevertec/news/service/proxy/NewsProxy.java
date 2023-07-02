@@ -12,6 +12,12 @@ import ru.clevertec.news.config.CacheConfig;
 import ru.clevertec.news.entity.News;
 import ru.clevertec.news.service.NewsService;
 
+import java.util.List;
+
+/**
+ * The NewsProxy class represents the service for news-related operations.
+ * It provides methods to interact with the cache layer and perform CRUD operations on news.
+ */
 @Logging
 @Service
 @RequiredArgsConstructor
@@ -76,5 +82,10 @@ public class NewsProxy implements NewsService {
 
             return response;
         }
+    }
+
+    @Override
+    public List<News> findAllBy(String word) {
+        return service.findAllBy(word);
     }
 }

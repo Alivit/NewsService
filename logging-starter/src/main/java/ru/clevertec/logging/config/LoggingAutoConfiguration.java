@@ -11,6 +11,11 @@ import org.springframework.context.annotation.Configuration;
 import ru.clevertec.logging.aop.aspect.LoggingAspect;
 import ru.clevertec.logging.aop.pointcut.CustomPointcut;
 
+/**
+ * The LoggingAutoConfiguration class is responsible for configuring
+ * the application and its components.
+ * It provides methods to set up various settings logging configurations.
+ */
 @Slf4j
 @Configuration
 @EnableConfigurationProperties(LoggingProperties.class)

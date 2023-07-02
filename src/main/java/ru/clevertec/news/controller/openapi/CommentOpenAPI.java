@@ -14,8 +14,11 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import ru.clevertec.news.entity.Comment;
 import ru.clevertec.exception_handler.model.ErrorMessage;
+
+import java.util.List;
 
 @Tag(name = "Comment", description = "The Comment API")
 public interface CommentOpenAPI {
@@ -141,6 +144,62 @@ public interface CommentOpenAPI {
             )
     })
     public ResponseEntity<Comment> getCommentById(@PathVariable Long id);
+
+    @Operation(
+            operationId = "findAllCommentsBy",
+            summary = "Method of receiving list of comments by the word",
+            parameters = @Parameter(
+                    name = "word",
+                    description = "Enter word here",
+                    example = "Ivan"
+            )
+    )
+    @ApiResponses( value = {
+            @ApiResponse(
+                    responseCode = "302",
+                    description = "Successful response with founded comment",
+                    content = @Content(
+                            mediaType = "application/json",
+                            schema = @Schema(implementation = Comment.class),
+                            examples = @ExampleObject("""
+                                    [{
+                                          "id": 4,
+                                          "username": "Ivan",
+                                          "text": "New Text",
+                                          "createDateComment": "2023-06-18T20:28:25.840Z",
+                                          "updateDateComment": "2023-06-18T20:28:25.840Z",
+                                          "news": {
+                                            "id": 20,
+                                            "title": "New Title",
+                                            "text": "New Text",
+                                            "createDateNews": "2023-06-18T20:28:25.841Z",
+                                            "updateDateNews": "2023-06-18T20:28:25.841Z",
+                                            "comments": [
+                                              "string"
+                                            ]
+                                          }
+                                    }]"""
+                            )
+                    )
+            ),
+            @ApiResponse(
+                    responseCode = "404",
+                    description = "The server not found comment",
+                    content = @Content(
+                            mediaType = "application/json",
+                            schema = @Schema(implementation = ErrorMessage.class),
+                            examples = @ExampleObject("""
+                                    {
+                                      "status": 404,
+                                      "message": "Comment with id - 4 not found",
+                                      "time": "2023-06-18T18:47:43.225Z"
+                                    }
+                                    """
+                            )
+                    )
+            )
+    })
+    public ResponseEntity<List<Comment>> findAllCommentsBy(@RequestParam String word);
 
     @Operation(
             operationId = "createComment",
